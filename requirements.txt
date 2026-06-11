@@ -1,0 +1,11 @@
+numpy
+scipy
+pennylane
+matplotlib
+networkx
+
+# Development:
+pytest
+
+# Optional, depending on local CUDA/PennyLane setup:
+# pennylane-lightning-gpu

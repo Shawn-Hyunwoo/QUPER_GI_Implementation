@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Experiment outputs (regenerable; can be large)
+runs/results/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+.ipynb_checkpoints/
+
+# Claude Code: personal/local files
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Paper PDF (3.4 MB; available at arXiv:2505.05981 — remove this line to track it)
+docs/*.pdf

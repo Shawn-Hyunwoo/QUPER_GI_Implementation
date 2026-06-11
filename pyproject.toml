@@ -1,0 +1,15 @@
+[project]
+name = "quper-gi"
+version = "0.1.0"
+description = "PennyLane-based QuPer heuristic simulator for graph isomorphism (arXiv:2505.05981)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "NPY"]
