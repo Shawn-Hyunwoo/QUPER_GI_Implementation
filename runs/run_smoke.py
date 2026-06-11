@@ -42,6 +42,13 @@ def main() -> None:
     parser.add_argument("--ancillas", type=int, default=1)
     parser.add_argument("--ancilla-schedule", action="store_true")
     parser.add_argument(
+        "--edge-prob",
+        type=float,
+        default=GIConfig().graph_p,
+        help="Erdos-Renyi edge probability p. Expected mean degree is p*(N-1); "
+        "e.g. p=4/(N-1) gives mean degree ~4. Default 0.5 (dense).",
+    )
+    parser.add_argument(
         "--perm-source",
         choices=["uniform", "borel", "bruhat"],
         default="bruhat",
@@ -59,13 +66,15 @@ def main() -> None:
         steps=args.steps,
         seed=args.seed,
         perm_source=args.perm_source,
+        graph_p=args.edge_prob,
     )
 
+    mean_degree = round(cfg.graph_p * (cfg.num_vertices - 1))
     outdir = Path(
         args.outdir
         if args.outdir
         else f"runs/results/smoke{cfg.num_vertices}_{cfg.ansatz}_m{cfg.ancillas}_"
-        f"{cfg.perm_source}_seed{cfg.seed}"
+        f"{cfg.perm_source}_deg{mean_degree}_seed{cfg.seed}"
     )
 
     bundle = run_experiment(cfg, outdir, use_ancilla_schedule=args.ancilla_schedule)
