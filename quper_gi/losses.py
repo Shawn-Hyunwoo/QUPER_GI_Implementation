@@ -11,6 +11,20 @@ def gi_frobenius_loss(p_mat, a_mat, b_mat):
     return qml.math.sum(residual * residual)
 
 
+def masked_frobenius_loss(p_mat, target_mat, b_mat, mask):
+    """Masked SGI loss: sum_{ij} mask_ij * (target_ij - (P B P^T)_ij)^2.
+
+    Generalizes the GI loss: with ``mask`` an all-ones off-diagonal matrix and
+    ``target_mat = A`` this equals ``gi_frobenius_loss``. For subgraph
+    isomorphism, ``mask`` restricts the penalty to the pattern's vertex pairs
+    (edges only for monomorphism, all pairs for the induced variant); see
+    :func:`quper_gi.graph_data.subgraph_mask`.
+    """
+    mapped = p_mat @ b_mat @ qml.math.transpose(p_mat)
+    residual = (target_mat - mapped) * mask
+    return qml.math.sum(residual * residual)
+
+
 def stochastic_regularizer(p_mat):
     """Penalize row/column sum deviations from 1.
 
@@ -43,11 +57,21 @@ def orthogonality_regularizer(p_mat):
     return qml.math.sum(residual * residual)
 
 
-def total_loss(theta, model, a_mat, b_mat, cfg):
-    """Regularized differentiable objective (paper Sec. 6.2, ell_R)."""
+def total_loss(theta, model, a_mat, b_mat, cfg, mask=None, target_mat=None):
+    """Regularized differentiable objective (paper Sec. 6.2, ell_R).
+
+    Without ``mask`` this is the GI objective on ``a_mat``. With ``mask`` it is
+    the masked SGI objective on ``target_mat`` (defaulting to ``a_mat``, since
+    the host doubles as the target in :func:`make_subgraph_instance`). The
+    regularizers act on the full DSM in both cases.
+    """
     p_hat = model(theta)
 
-    base = gi_frobenius_loss(p_hat, a_mat, b_mat)
+    if mask is None:
+        base = gi_frobenius_loss(p_hat, a_mat, b_mat)
+    else:
+        target = a_mat if target_mat is None else target_mat
+        base = masked_frobenius_loss(p_hat, target, b_mat, mask)
 
     reg = 0.0
     if cfg.lambda_stochastic != 0.0:

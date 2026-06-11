@@ -1,4 +1,4 @@
-"""Graph generation and hidden-permutation GI instances."""
+"""Graph generation and hidden-permutation GI / SGI instances."""
 
 from __future__ import annotations
 
@@ -141,3 +141,110 @@ def verify_isomorphic_pair(
 
     if error > atol:
         raise ValueError(f"Generated instance failed verification. error={error}")
+
+
+# ---------------------------------------------------------------------------
+# Subgraph isomorphism (SGI)
+#
+# Convention: the pattern H occupies the FIRST `pattern_size` vertices of the
+# host graph; the remaining vertices are padding. The hidden permutation P*
+# scrambles the host into the target B exactly as in the GI case, so the same
+# P-convention and B = P*.T @ host @ P* relation hold. Only the loss is masked
+# to the pattern's vertex pairs.
+# ---------------------------------------------------------------------------
+
+
+def subgraph_mask(
+    host: np.ndarray,
+    pattern_size: int,
+    induced: bool = False,
+) -> np.ndarray:
+    """Build the constraint mask over the pattern's vertex pairs.
+
+    The mask selects which entries of ``host - P B P^T`` are penalized:
+
+    - ``induced=False`` (monomorphism): only the pattern's EDGES are constrained
+      (edge-preserving map; non-edges of H are free to map onto edges of B).
+    - ``induced=True`` (induced subgraph): ALL pattern vertex pairs are
+      constrained, so non-edges of H must map onto non-edges of B too.
+
+    The diagonal is always excluded (no self-loops).
+    """
+    n = host.shape[0]
+    if not 1 <= pattern_size <= n:
+        raise ValueError("pattern_size must be in [1, num_vertices].")
+
+    mask = np.zeros((n, n), dtype=np.float64)
+    mask[:pattern_size, :pattern_size] = 1.0
+    np.fill_diagonal(mask, 0.0)
+
+    if not induced:
+        mask = mask * (host > 0.0)
+
+    return mask
+
+
+def make_subgraph_instance(
+    num_vertices: int,
+    pattern_size: int,
+    edge_prob: float,
+    seed: int,
+    perm_source: str = "uniform",
+    induced: bool = False,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """Create a known-solvable SGI instance with a planted embedding.
+
+    The pattern H is the induced subgraph on the first ``pattern_size`` vertices
+    of a random host graph, so H is by construction a subgraph of the host (and
+    an induced subgraph). The host is scrambled by a hidden permutation P* into
+    the target B, giving a guaranteed-correct embedding P*.
+
+    Returns
+    -------
+    host:
+        Host adjacency matrix; serves as the masked target (its top-left
+        ``pattern_size`` block is the pattern H).
+
+    B:
+        Target graph, B = P*.T @ host @ P*.
+
+    P_star:
+        Hidden permutation matrix; the planted solution.
+
+    perm:
+        Hidden permutation vector.
+
+    mask:
+        Constraint mask from :func:`subgraph_mask` (monomorphism or induced).
+    """
+    if not 1 <= pattern_size <= num_vertices:
+        raise ValueError("pattern_size must be in [1, num_vertices].")
+
+    host = generate_er_graph(num_vertices, edge_prob, seed)
+
+    if perm_source == "uniform":
+        p_star, perm = random_permutation_matrix(num_vertices, seed + 1)
+    elif perm_source in {"borel", "bruhat"}:
+        p_star, perm = span_permutation_matrix(num_vertices, seed + 1, ansatz=perm_source)
+    else:
+        raise ValueError("perm_source must be 'uniform', 'borel', or 'bruhat'.")
+
+    b_mat = p_star.T @ host @ p_star
+    mask = subgraph_mask(host, pattern_size, induced=induced)
+
+    return host, b_mat, p_star, perm, mask
+
+
+def verify_subgraph_instance(
+    host: np.ndarray,
+    b_mat: np.ndarray,
+    p_star: np.ndarray,
+    mask: np.ndarray,
+    atol: float = 1.0e-9,
+) -> None:
+    """Raise if the planted P* does not satisfy the masked constraints."""
+    residual = (host - p_star @ b_mat @ p_star.T) * mask
+    error = float(np.sum(residual * residual))
+
+    if error > atol:
+        raise ValueError(f"Generated SGI instance failed verification. error={error}")
