@@ -24,7 +24,7 @@ QuPer-GI: a PennyLane-based heuristic simulator for Graph Isomorphism, training 
 - Smoke run (small end-to-end check):
   `/home/HW/miniconda3/bin/conda run -n quantum_env python -m quper_gi.run_gi --num_vertices 4 --ancillas 0 --ansatz borel --steps 60 --outdir /tmp/quper_smoke4`
 - Experiment runners (organized outputs + visualization under `runs/results/`):
-  `conda run -n quantum_env python -m runs.run_smoke16` (N=16, minutes) and `python -m runs.run_main256` (N=256, 20 qubits, long — confirm before launching).
+  `conda run -n quantum_env python -m runs.run_smoke` (N=16, minutes) and `python -m runs.run_main256` (N=256, 20 qubits, long — confirm before launching).
 - Tests: `conda run -n quantum_env pytest` (testpaths configured in pyproject.toml).
 - Lint: `ruff check .` (config in pyproject.toml). Run it on files you edit.
 

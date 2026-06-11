@@ -4,9 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from math import log2
-from typing import Sequence
 
-import numpy as np
 import pennylane as qml
 
 from .ansatz import apply_ansatz, get_num_params

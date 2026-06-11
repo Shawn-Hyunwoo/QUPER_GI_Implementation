@@ -6,7 +6,6 @@ from dataclasses import dataclass
 from math import log2
 from typing import Literal
 
-
 AnsatzName = Literal["borel", "bruhat"]
 
 

@@ -13,8 +13,8 @@ from .ansatz import transfer_theta
 from .configs import GIConfig
 from .dsm_circuit import QuPerDSM
 from .losses import total_loss
-from .projection import project_best
 from .metrics import frobenius_mismatch, hidden_perm_overlap
+from .projection import project_best
 
 SUCCESS_TOL = 1.0e-9
 

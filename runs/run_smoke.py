@@ -1,9 +1,12 @@
-"""Smoke experiment: N = 16 vertices (q = 4) with full visualization.
+"""Small-N smoke experiment with full visualization (default N = 16, q = 4).
+
+Note: N (`--num-vertices`) is the GRAPH VERTEX count, not qubits. The circuit
+uses q = log2(N) qubits per register, 2q + 2m wires total (N=16, m=1 -> 10).
 
 Usage (from the repository root):
 
-    conda run -n quantum_env python -m runs.run_smoke16 [--seed 0] [--steps 300] \
-        [--ansatz bruhat] [--ancillas 1] [--ancilla-schedule]
+    conda run -n quantum_env python -m runs.run_smoke [--num-vertices 16] \
+        [--seed 0] [--steps 300] [--ansatz bruhat] [--ancillas 1] [--ancilla-schedule]
 
 Small enough to run on a laptop CPU in minutes; produces the matching
 visualization showing exactly how A's vertices map onto B's.
