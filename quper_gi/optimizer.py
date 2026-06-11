@@ -35,12 +35,35 @@ def to_numpy_matrix(x) -> np.ndarray:
     return np.asarray(qml.math.toarray(x), dtype=np.float64)
 
 
+def _step_with_grad(opt, objective, theta):
+    """One Adam step that also reports the gradient norm (single evaluation).
+
+    Replicates step_and_cost's internals (compute_grad + apply_grad) so the
+    gradient is available for FOM logging without a second circuit evaluation.
+    Falls back to plain step_and_cost (grad norm = nan) on API mismatch.
+    """
+    try:
+        grad, forward = opt.compute_grad(objective, (theta,), {})
+        new_args = opt.apply_grad(grad, (theta,))
+        new_theta = new_args[0] if isinstance(new_args, (list, tuple)) else new_args
+        if forward is None:
+            forward = objective(theta)
+        g = grad[0] if isinstance(grad, (list, tuple)) else grad
+        gnorm = float(np.linalg.norm(np.asarray(qml.math.toarray(g)).ravel()))
+        return new_theta, float(forward), gnorm
+    except Exception:
+        new_theta, forward = opt.step_and_cost(objective, theta)
+        return new_theta, float(forward), float("nan")
+
+
 def train_single_m(
     a_mat: np.ndarray,
     b_mat: np.ndarray,
     p_star: np.ndarray | None,
     cfg: GIConfig,
     theta0: np.ndarray | None = None,
+    mask: np.ndarray | None = None,
+    target_mat: np.ndarray | None = None,
 ) -> dict:
     """Train one QuPer-GI model for a fixed number of ancilla pairs.
 
@@ -49,9 +72,16 @@ def train_single_m(
     theta0:
         Optional warm-start parameters (used by the ancilla schedule).
 
+    mask, target_mat:
+        Optional SGI constraint mask and target (see losses.masked_frobenius_loss).
+        With mask=None this is the plain GI objective; projections are scored
+        with the same (masked or full) objective.
+
     Returns a dictionary containing the best projected solution found, plus
     `theta_final` (the parameters after the last optimizer step, used to
-    warm-start the next ancilla stage).
+    warm-start the next ancilla stage). History records include FOM
+    instrumentation: grad_norm, p_hat_entropy, projection_residual,
+    distinct_perms.
     """
     model = QuPerDSM(
         num_vertices=cfg.num_vertices,
@@ -70,9 +100,21 @@ def train_single_m(
 
     a_train = pnp.array(a_mat, requires_grad=False)
     b_train = pnp.array(b_mat, requires_grad=False)
+    mask_train = None if mask is None else pnp.array(mask, requires_grad=False)
+    target_np = a_mat if target_mat is None else target_mat
+    target_train = None if target_mat is None else pnp.array(target_mat, requires_grad=False)
+
+    if mask is None:
+        score_fn = None  # project_best defaults to the full GI loss
+    else:
+        from .metrics import masked_mismatch
+
+        def score_fn(p_mat):
+            return masked_mismatch(target_np, b_mat, p_mat, mask)
 
     opt = qml.AdamOptimizer(stepsize=cfg.lr, beta1=cfg.beta1, beta2=cfg.beta2, eps=cfg.eps)
     rng = np.random.default_rng(cfg.seed + 10_000)
+    seen_perms: set[tuple[int, ...]] = set()
 
     best = {
         "value": float("inf"),
@@ -85,16 +127,20 @@ def train_single_m(
     history: list[dict] = []
 
     def objective(current_theta):
-        return total_loss(current_theta, model, a_train, b_train, cfg)
+        return total_loss(
+            current_theta, model, a_train, b_train, cfg,
+            mask=mask_train, target_mat=target_train,
+        )
 
     print(model.summary())
 
     for step in range(cfg.steps):
-        theta, loss_value = opt.step_and_cost(objective, theta)
+        theta, loss_value, grad_norm = _step_with_grad(opt, objective, theta)
 
         record = {
             "step": int(step),
             "train_loss": float(loss_value),
+            "grad_norm": grad_norm,
         }
 
         if step % cfg.projection_interval == 0 or step == cfg.steps - 1:
@@ -106,7 +152,13 @@ def train_single_m(
                 b_mat=b_mat,
                 rng=rng,
                 num_random=cfg.num_random_projections,
+                score_fn=score_fn,
             )
+
+            seen_perms.add(tuple(int(v) for v in np.argmax(p_proj, axis=1)))
+            record["p_hat_entropy"] = float(-np.sum(p_hat * np.log(p_hat + 1e-12)))
+            record["projection_residual"] = float(np.linalg.norm(p_hat - p_proj))
+            record["distinct_perms"] = len(seen_perms)
 
             if proj_value < best["value"]:
                 best.update(
@@ -148,6 +200,8 @@ def train_single_m(
 
     if best["p"] is not None:
         best["final_mismatch"] = frobenius_mismatch(a_mat, b_mat, best["p"])
+        if score_fn is not None:
+            best["final_masked_mismatch"] = score_fn(best["p"])
 
     return best
 

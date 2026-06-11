@@ -135,6 +135,143 @@ def plot_heatmaps(
     print(f"[visualize] heatmaps saved to: {path}")
 
 
+def plot_sgi_matching(
+    host: np.ndarray,
+    b_mat: np.ndarray,
+    p_best: np.ndarray,
+    mask: np.ndarray,
+    pattern_size: int,
+    path: Path,
+    max_vertices: int = 32,
+) -> bool:
+    """Show where the pattern embeds in the target graph.
+
+    Left: the pattern H (first `pattern_size` host vertices). Right: the full
+    target B; vertices receiving the pattern share the pattern vertex's color,
+    other vertices are gray. Image edges of satisfied pattern constraints are
+    drawn thick; violated constraints are dashed red. Returns False if N is
+    too large to draw.
+    """
+    n = host.shape[0]
+    k = pattern_size
+    if n > max_vertices:
+        print(f"[visualize] skipping SGI plot: N={n} > {max_vertices}")
+        return False
+
+    sigma = np.argmax(np.asarray(p_best), axis=1).astype(int)
+
+    pattern = nx.from_numpy_array(host[:k, :k])
+    graph_b = nx.from_numpy_array(b_mat)
+    pos_h = nx.spring_layout(pattern, seed=7)
+    pos_b = nx.spring_layout(graph_b, seed=7)
+
+    cmap = plt.get_cmap("turbo")
+    pat_colors = [cmap(i / max(1, k - 1)) for i in range(k)]
+    image_of = {i: int(sigma[i]) for i in range(k)}
+
+    ok_edges, bad_edges = [], []
+    for i in range(k):
+        for j in range(i + 1, k):
+            if mask[i, j] <= 0:
+                continue
+            bi, bj = image_of[i], image_of[j]
+            satisfied = np.isclose(b_mat[bi, bj], host[i, j])
+            (ok_edges if satisfied else bad_edges).append((bi, bj))
+
+    fig, (ax_h, ax_b) = plt.subplots(
+        1, 2, figsize=(13, 6), gridspec_kw={"width_ratios": [1, 1.6]}
+    )
+
+    nx.draw_networkx_edges(pattern, pos_h, ax=ax_h, width=1.8)
+    nx.draw_networkx_nodes(
+        pattern, pos_h, ax=ax_h, node_color=pat_colors, node_size=500, edgecolors="black"
+    )
+    nx.draw_networkx_labels(pattern, pos_h, ax=ax_h, font_size=10)
+    ax_h.set_title(f"pattern H ({k} vertices)")
+    ax_h.set_axis_off()
+
+    node_colors = [
+        pat_colors[sigma.tolist().index(v)] if v in image_of.values() else "lightgray"
+        for v in range(n)
+    ]
+    node_sizes = [500 if v in image_of.values() else 220 for v in range(n)]
+    nx.draw_networkx_edges(graph_b, pos_b, ax=ax_b, alpha=0.3)
+    edges_present = [(u, v) for (u, v) in ok_edges if b_mat[u, v] > 0]
+    if edges_present:
+        nx.draw_networkx_edges(
+            graph_b, pos_b, edgelist=edges_present, ax=ax_b, width=2.6
+        )
+    if bad_edges:
+        nx.draw_networkx_edges(
+            graph_b, pos_b, edgelist=bad_edges, ax=ax_b,
+            edge_color="red", style="dashed", width=2.2,
+        )
+    nx.draw_networkx_nodes(
+        graph_b, pos_b, ax=ax_b, node_color=node_colors, node_size=node_sizes,
+        edgecolors="black",
+    )
+    labels = {v: str(v) for v in range(n)}
+    for i, bv in image_of.items():
+        labels[bv] = f"{bv}\n(h{i})"
+    nx.draw_networkx_labels(graph_b, pos_b, ax=ax_b, labels=labels, font_size=8)
+
+    title = "target B — pattern image highlighted (same colors)"
+    title += (
+        " — embedding satisfied"
+        if not bad_edges
+        else f" — {len(bad_edges)} violated constraints (red)"
+    )
+    ax_b.set_title(title)
+    ax_b.set_axis_off()
+    fig.tight_layout()
+    fig.savefig(path, dpi=150)
+    plt.close(fig)
+    print(f"[visualize] SGI matching plot saved to: {path}")
+    return True
+
+
+def plot_fom_panel(history: list[dict], scalars: dict, path: Path) -> None:
+    """Aggregate FOM panel: grad norm, sharpness, search diversity, scalars.
+
+    Panels use whatever keys exist in the history records (older histories
+    without instrumentation simply produce empty panels).
+    """
+    def series(key):
+        pts = [(r["step"], r[key]) for r in history if key in r and r[key] == r[key]]
+        return ([p[0] for p in pts], [p[1] for p in pts])
+
+    fig, axes = plt.subplots(2, 2, figsize=(11, 7.5))
+
+    s, v = series("grad_norm")
+    axes[0, 0].plot(s, v, lw=1.2)
+    axes[0, 0].set_title("gradient norm")
+    axes[0, 0].set_yscale("log")
+    axes[0, 0].set_xlabel("step")
+
+    s1, v1 = series("p_hat_entropy")
+    s2, v2 = series("projection_residual")
+    axes[0, 1].plot(s1, v1, lw=1.2, label="P_hat entropy")
+    axes[0, 1].plot(s2, v2, lw=1.2, label="||P_hat - P_proj||_F")
+    axes[0, 1].set_title("soft-matrix sharpness")
+    axes[0, 1].set_xlabel("step")
+    axes[0, 1].legend()
+
+    s, v = series("distinct_perms")
+    axes[1, 0].plot(s, v, lw=1.2)
+    axes[1, 0].set_title("distinct projected permutations (cumulative)")
+    axes[1, 0].set_xlabel("step")
+
+    axes[1, 1].set_axis_off()
+    text = "\n".join(f"{k}: {v}" for k, v in scalars.items())
+    axes[1, 1].text(0.02, 0.95, text, va="top", family="monospace", fontsize=10)
+    axes[1, 1].set_title("scalar FOMs")
+
+    fig.tight_layout()
+    fig.savefig(path, dpi=150)
+    plt.close(fig)
+    print(f"[visualize] FOM panel saved to: {path}")
+
+
 def plot_soft_matrix(p_soft: np.ndarray, p_best: np.ndarray, path: Path) -> None:
     """Soft DSM next to its hard projection."""
     fig, axes = plt.subplots(1, 2, figsize=(9.5, 4.6))

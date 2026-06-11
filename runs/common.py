@@ -190,6 +190,33 @@ def run_experiment(
     write_report(outdir / "report.txt", cfg, result, verification)
     plot_loss_curve(result.get("history", []), outdir / "loss_curve.png")
 
+    # Scalar FOMs (journal Sec 5.4) + instrumented-trajectory panel.
+    history = result.get("history", [])
+    best_step = result.get("step")
+    soft_hard_gap = next(
+        (r["train_loss"] for r in history if r["step"] == best_step), None
+    )
+    total_edges = int(a_mat.sum() // 2)
+    fom_scalars = {
+        "success": verification["success"],
+        "best_projected_loss": result["value"],
+        "best_step": best_step,
+        "soft_hard_gap": None if soft_hard_gap is None else round(soft_hard_gap, 4),
+        "edge_mismatch": verification["edge_mismatch"],
+        "total_edges": total_edges,
+        "edge_mismatch_normalized": (
+            round(verification["edge_mismatch"] / total_edges, 4) if total_edges else None
+        ),
+        "projection_method": result.get("projection"),
+        "elapsed_seconds": round(result["elapsed_seconds"], 2),
+    }
+    with (outdir / "fom.json").open("w", encoding="utf-8") as f:
+        json.dump(fom_scalars, f, indent=2)
+
+    from .visualize import plot_fom_panel
+
+    plot_fom_panel(history, fom_scalars, outdir / "fom.png")
+
     print(f"[runs] outputs saved to: {outdir}")
     print(f"[runs] success={verification['success']} "
           f"edge_mismatch={verification['edge_mismatch']} "

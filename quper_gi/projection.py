@@ -60,13 +60,19 @@ def project_best(
     b_mat: np.ndarray,
     rng: np.random.Generator,
     num_random: int = 50,
+    score_fn=None,
 ) -> tuple[np.ndarray, float, str]:
-    """Try multiple projections and return the best by true projected GI loss.
+    """Try multiple projections and return the best by the true objective.
 
     Follows the paper: both the Hungarian assignment and `num_random`
     random-order projections are evaluated with the original (unregularized)
-    objective, and the minimizer is returned.
+    objective, and the minimizer is returned. `score_fn(P) -> float` overrides
+    the default GI loss (used for the masked SGI objective).
     """
+    if score_fn is None:
+        def score_fn(p_mat):
+            return projected_gi_loss_np(p_mat, a_mat, b_mat)
+
     candidates: list[tuple[str, np.ndarray]] = []
 
     candidates.append(("hungarian", project_hungarian(p_hat)))
@@ -79,7 +85,7 @@ def project_best(
     best_p = None
 
     for name, candidate in candidates:
-        value = projected_gi_loss_np(candidate, a_mat, b_mat)
+        value = score_fn(candidate)
 
         if value < best_value:
             best_name = name
