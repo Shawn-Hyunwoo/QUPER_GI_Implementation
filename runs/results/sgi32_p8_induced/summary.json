@@ -1,0 +1,12 @@
+{
+  "num_vertices": 32,
+  "pattern_size": 8,
+  "kind": "induced",
+  "n_constraints": 28,
+  "best_masked_loss": 8.0,
+  "best_step": 20,
+  "projection": "random_order_29",
+  "violations": 4,
+  "success": false,
+  "elapsed_seconds": 53.582917674444616
+}

@@ -1,0 +1,12 @@
+{
+  "num_vertices": 64,
+  "pattern_size": 10,
+  "kind": "induced",
+  "n_constraints": 45,
+  "best_masked_loss": 20.0,
+  "best_step": 15,
+  "projection": "hungarian",
+  "violations": 10,
+  "success": false,
+  "elapsed_seconds": 121.92293802089989
+}

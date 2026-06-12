@@ -1,0 +1,117 @@
+{
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 12.687721915332428,
+      "grad_norm": 0.6843946743109939,
+      "p_hat_entropy": 41.584143789537166,
+      "projection_residual": 3.8798257709777966,
+      "distinct_perms": 1,
+      "projected_loss": 4.0,
+      "projection": "random_order_1",
+      "hidden_overlap": 0.0,
+      "best_projected_loss": 4.0
+    },
+    {
+      "step": 1,
+      "train_loss": 11.99036910427467,
+      "grad_norm": 1.2638022811663079,
+      "p_hat_entropy": 39.19581286176623,
+      "projection_residual": 3.9335315994900384,
+      "distinct_perms": 2,
+      "projected_loss": 2.0,
+      "projection": "random_order_24",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 2.0
+    },
+    {
+      "step": 2,
+      "train_loss": 10.725898338115506,
+      "grad_norm": 1.5587521588851367,
+      "p_hat_entropy": 34.13806363425395,
+      "projection_residual": 3.9739037674623514,
+      "distinct_perms": 3,
+      "projected_loss": 2.0,
+      "projection": "random_order_19",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 2.0
+    },
+    {
+      "step": 3,
+      "train_loss": 9.762308699134683,
+      "grad_norm": 2.4884614629124804,
+      "p_hat_entropy": 27.789623632345357,
+      "projection_residual": 2.949082518059408,
+      "distinct_perms": 4,
+      "projected_loss": 4.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 2.0
+    },
+    {
+      "step": 4,
+      "train_loss": 8.073989067516633,
+      "grad_norm": 2.04403748212293,
+      "p_hat_entropy": 26.323452743500606,
+      "projection_residual": 2.619556057681971,
+      "distinct_perms": 5,
+      "projected_loss": 4.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 2.0
+    },
+    {
+      "step": 5,
+      "train_loss": 7.3828378769592184,
+      "grad_norm": 2.1506805231963146,
+      "p_hat_entropy": 23.540873980761525,
+      "projection_residual": 4.113813704519408,
+      "distinct_perms": 6,
+      "projected_loss": 2.0,
+      "projection": "random_order_10",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 2.0
+    },
+    {
+      "step": 6,
+      "train_loss": 6.902179118549258,
+      "grad_norm": 2.921249509911327,
+      "p_hat_entropy": 19.694611334156946,
+      "projection_residual": 1.8858421497468294,
+      "distinct_perms": 7,
+      "projected_loss": 4.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 2.0
+    },
+    {
+      "step": 7,
+      "train_loss": 6.071966340597832,
+      "grad_norm": 3.073434905152908,
+      "p_hat_entropy": 16.479505131617962,
+      "projection_residual": 4.371894448461104,
+      "distinct_perms": 8,
+      "projected_loss": 2.0,
+      "projection": "random_order_49",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 2.0
+    },
+    {
+      "step": 8,
+      "train_loss": 5.275682822149083,
+      "grad_norm": 3.185325502958383,
+      "p_hat_entropy": 14.899176577268843,
+      "projection_residual": 3.875963701904753,
+      "distinct_perms": 9,
+      "projected_loss": 0.0,
+      "projection": "random_order_38",
+      "hidden_overlap": 0.1875,
+      "best_projected_loss": 0.0
+    }
+  ],
+  "value": 0.0,
+  "step": 8,
+  "projection": "random_order_38",
+  "final_mismatch": 104.0,
+  "final_masked_mismatch": 0.0
+}
