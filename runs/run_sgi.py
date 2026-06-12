@@ -24,7 +24,7 @@ from quper_gi.graph_data import make_subgraph_instance, verify_subgraph_instance
 from quper_gi.metrics import is_sgi_success, masked_mismatch, subgraph_violations
 from quper_gi.optimizer import train_single_m
 
-from .visualize import plot_fom_panel, plot_sgi_matching
+from .visualize import plot_fom_panel, plot_sgi_heatmaps, plot_sgi_matching
 
 
 def main() -> None:
@@ -124,7 +124,11 @@ def main() -> None:
     }
     plot_fom_panel(result.get("history", []), fom_scalars, outdir / "fom.png")
     plot_sgi_matching(
-        host, b_mat, p_best, mask, args.pattern_size, outdir / "matching.png"
+        host, b_mat, p_best, mask, args.pattern_size, outdir / "matching.png",
+        max_vertices=64,
+    )
+    plot_sgi_heatmaps(
+        host, b_mat, p_best, mask, args.pattern_size, outdir / "heatmaps.png"
     )
 
     # Consistency check: stored best value equals a fresh masked evaluation.

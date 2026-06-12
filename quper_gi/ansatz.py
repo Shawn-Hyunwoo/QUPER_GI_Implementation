@@ -99,7 +99,13 @@ def weyl_block(params, wires: Sequence[int]) -> None:
             idx += 1
 
 
-def apply_borel_ansatz(theta, wires: Sequence[int]) -> None:
+def _visual_barrier(wires: Sequence[int], enabled: bool) -> None:
+    """Drawing-only separator between functional blocks (no effect on the state)."""
+    if enabled:
+        qml.Barrier(wires=wires, only_visual=True)
+
+
+def apply_borel_ansatz(theta, wires: Sequence[int], barriers: bool = False) -> None:
     """Apply X layer followed by one Borel block."""
     q_u = len(wires)
     n_x = q_u
@@ -113,10 +119,11 @@ def apply_borel_ansatz(theta, wires: Sequence[int]) -> None:
     b_params = theta[n_x:n_x + n_b]
 
     x_layer(x_params, wires)
+    _visual_barrier(wires, barriers)
     borel_block(b_params, wires)
 
 
-def apply_bruhat_ansatz(theta, wires: Sequence[int]) -> None:
+def apply_bruhat_ansatz(theta, wires: Sequence[int], barriers: bool = False) -> None:
     """Apply X-B-W-B Bruhat-style ansatz."""
     q_u = len(wires)
     n_x = q_u
@@ -141,19 +148,22 @@ def apply_bruhat_ansatz(theta, wires: Sequence[int]) -> None:
     b2_params = theta[offset:offset + n_b]
 
     x_layer(x_params, wires)
+    _visual_barrier(wires, barriers)
     borel_block(b1_params, wires)
+    _visual_barrier(wires, barriers)
     weyl_block(w_params, wires)
+    _visual_barrier(wires, barriers)
     borel_block(b2_params, wires)
 
 
-def apply_ansatz(theta, wires: Sequence[int], ansatz: str) -> None:
+def apply_ansatz(theta, wires: Sequence[int], ansatz: str, barriers: bool = False) -> None:
     """Dispatch to a named ansatz."""
     if ansatz == "borel":
-        apply_borel_ansatz(theta, wires)
+        apply_borel_ansatz(theta, wires, barriers=barriers)
         return
 
     if ansatz == "bruhat":
-        apply_bruhat_ansatz(theta, wires)
+        apply_bruhat_ansatz(theta, wires, barriers=barriers)
         return
 
     raise ValueError(f"Unknown ansatz: {ansatz}")

@@ -73,6 +73,7 @@ class QuPerDSM:
         ansatz: str,
         device_name: str = "default.qubit",
         diff_method: str = "best",
+        visual_barriers: bool = False,
     ) -> None:
         q_float = log2(num_vertices)
         if int(q_float) != q_float:
@@ -83,6 +84,7 @@ class QuPerDSM:
         self.ancillas = int(ancillas)
         self.ansatz = ansatz
 
+        self.visual_barriers = bool(visual_barriers)
         self.total_wires = 2 * self.q + 2 * self.ancillas
         self.layout = build_wire_layout(self.q, self.ancillas)
         self.q_u = len(self.layout.u_wires)
@@ -110,7 +112,11 @@ class QuPerDSM:
     def _circuit(self, theta):
         """Internal QNode circuit returning probabilities over row+col wires."""
         self._prepare_bell_pairs()
-        apply_ansatz(theta, self.layout.u_wires, self.ansatz)
+        if self.visual_barriers:
+            qml.Barrier(wires=range(self.total_wires), only_visual=True)
+        apply_ansatz(
+            theta, self.layout.u_wires, self.ansatz, barriers=self.visual_barriers
+        )
         return qml.probs(wires=self.layout.matrix_wires)
 
     def probs_to_matrix(self, probs):

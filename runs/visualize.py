@@ -230,6 +230,71 @@ def plot_sgi_matching(
     return True
 
 
+def plot_sgi_heatmaps(
+    host: np.ndarray,
+    b_mat: np.ndarray,
+    p_best: np.ndarray,
+    mask: np.ndarray,
+    pattern_size: int,
+    path: Path,
+) -> None:
+    """SGI heatmap (any N).
+
+    Panels: (1) the target B with the selected rows/columns marked — the k
+    vertices sigma(0..k-1) the permutation assigned to the pattern slots;
+    (2) the pattern H (k x k); (3) the k x k submatrix of B extracted at those
+    vertices, slot-ordered, i.e. B[sigma_i, sigma_j] = (P B P^T)[i, j];
+    (4) the graded difference mask * |H - extracted|. Under monomorphism the
+    extracted block may contain EXTRA edges (superset of H's edges) — only
+    H's edge positions are graded; under induced the two blocks must match.
+    """
+    k = pattern_size
+    sigma = np.argmax(np.asarray(p_best), axis=1).astype(int)[:k]
+
+    pattern = host[:k, :k]
+    raw_crop = b_mat[np.ix_(np.sort(sigma), np.sort(sigma))]
+    extracted = b_mat[np.ix_(sigma, sigma)]
+    block_mask = mask[:k, :k]
+    residual = np.abs(pattern - extracted) * block_mask
+
+    def edges(m):
+        return int(m.sum() // 2)
+
+    fig, axes = plt.subplots(
+        1, 5, figsize=(19, 4.4), gridspec_kw={"width_ratios": [1.5, 1, 1, 1, 1]}
+    )
+
+    im = axes[0].imshow(b_mat, cmap="Greys", vmin=0, vmax=1, interpolation="nearest")
+    for v in sigma:
+        axes[0].axhline(v, color="red", lw=0.8, alpha=0.45)
+        axes[0].axvline(v, color="red", lw=0.8, alpha=0.45)
+    axes[0].set_title(f"target B — selected {k} rows/cols (red)", fontsize=10)
+
+    panels = (
+        (axes[1], raw_crop, f"crop as-is, ascending ({edges(raw_crop)} edges)"),
+        (axes[2], extracted, f"reordered to slots ({edges(extracted)} edges)"),
+        (axes[3], pattern, f"pattern H ({edges(pattern)} edges)"),
+        (axes[4], residual, r"mask $\odot$ |H $-$ reordered|"),
+    )
+    for ax, mat, title in panels:
+        im = ax.imshow(mat, cmap="Greys", vmin=0, vmax=1, interpolation="nearest")
+        ax.set_title(title, fontsize=10)
+    for ax in axes:
+        ax.set_xticks([])
+        ax.set_yticks([])
+    fig.colorbar(im, ax=axes, shrink=0.8)
+
+    violations = int(residual.sum() // 2)
+    fig.suptitle(
+        "embedding satisfied" if violations == 0
+        else f"{violations} violated constraints",
+        y=1.02,
+    )
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[visualize] SGI heatmaps saved to: {path}")
+
+
 def plot_fom_panel(history: list[dict], scalars: dict, path: Path) -> None:
     """Aggregate FOM panel: grad norm, sharpness, search diversity, scalars.
 

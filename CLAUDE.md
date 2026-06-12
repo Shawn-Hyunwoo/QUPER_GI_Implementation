@@ -18,6 +18,8 @@ QuPer-GI: a PennyLane-based heuristic simulator for Graph Isomorphism, training 
 - No emojis; minimal formatting; concise and direct.
 - 결과 서술은 건조하게. "우스울 정도로", "안정적으로 실패", "킬러", "압도적" 같은
   과장·연출·잘난 척하는 수사 금지. 수치와 사실만 쓰고 평가 형용사는 빼라.
+- 작업 크기에 과정을 비례시켜라. 시각화 등 cosmetic한 단순 작업은 국소 수정으로
+  끝내고, 코어 모듈 변경·전체 테스트·전체 재실행 같은 풀 사이클을 돌리지 마라.
 - Stick to PennyLane; do not introduce alternative quantum SDKs unless explicitly asked.
 - When debugging: identify the root cause first, name the exact file(s), propose the smallest fix, and say how to validate it.
 
