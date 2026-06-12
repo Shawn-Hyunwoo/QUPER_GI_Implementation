@@ -1,0 +1,93 @@
+{
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 23.82491770262714,
+      "grad_norm": 0.6408241341357135,
+      "p_hat_entropy": 105.36888010703834,
+      "projection_residual": 5.584159350612116,
+      "distinct_perms": 1,
+      "projected_loss": 6.0,
+      "projection": "random_order_9",
+      "hidden_overlap": 0.03125,
+      "best_projected_loss": 6.0
+    },
+    {
+      "step": 1,
+      "train_loss": 23.32442247605285,
+      "grad_norm": 1.0415283441618417,
+      "p_hat_entropy": 99.75259625382996,
+      "projection_residual": 5.603820199082179,
+      "distinct_perms": 2,
+      "projected_loss": 4.0,
+      "projection": "random_order_30",
+      "hidden_overlap": 0.0,
+      "best_projected_loss": 4.0
+    },
+    {
+      "step": 2,
+      "train_loss": 22.479340396255516,
+      "grad_norm": 2.174863044260906,
+      "p_hat_entropy": 89.0913609260671,
+      "projection_residual": 5.658817950503767,
+      "distinct_perms": 3,
+      "projected_loss": 6.0,
+      "projection": "random_order_10",
+      "hidden_overlap": 0.0,
+      "best_projected_loss": 4.0
+    },
+    {
+      "step": 3,
+      "train_loss": 20.56718603343445,
+      "grad_norm": 3.0941255714096942,
+      "p_hat_entropy": 76.12993913998623,
+      "projection_residual": 5.718708576247824,
+      "distinct_perms": 4,
+      "projected_loss": 6.0,
+      "projection": "random_order_46",
+      "hidden_overlap": 0.0,
+      "best_projected_loss": 4.0
+    },
+    {
+      "step": 4,
+      "train_loss": 18.31553621179489,
+      "grad_norm": 2.808173897455401,
+      "p_hat_entropy": 69.98596766512426,
+      "projection_residual": 5.833953150770109,
+      "distinct_perms": 5,
+      "projected_loss": 4.0,
+      "projection": "random_order_32",
+      "hidden_overlap": 0.0,
+      "best_projected_loss": 4.0
+    },
+    {
+      "step": 5,
+      "train_loss": 16.909428395642045,
+      "grad_norm": 2.7466074614780225,
+      "p_hat_entropy": 67.39994001661802,
+      "projection_residual": 6.030208895095002,
+      "distinct_perms": 6,
+      "projected_loss": 6.0,
+      "projection": "random_order_23",
+      "hidden_overlap": 0.0,
+      "best_projected_loss": 4.0
+    },
+    {
+      "step": 6,
+      "train_loss": 16.11505791789759,
+      "grad_norm": 4.1443730988764065,
+      "p_hat_entropy": 61.05687222270926,
+      "projection_residual": 6.021934748289119,
+      "distinct_perms": 7,
+      "projected_loss": 0.0,
+      "projection": "random_order_10",
+      "hidden_overlap": 0.09375,
+      "best_projected_loss": 0.0
+    }
+  ],
+  "value": 0.0,
+  "step": 6,
+  "projection": "random_order_10",
+  "final_mismatch": 472.0,
+  "final_masked_mismatch": 0.0
+}

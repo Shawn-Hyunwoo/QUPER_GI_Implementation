@@ -1,0 +1,31 @@
+QuPer-GI run report
+===================
+Config: N=16, q=4, m=1, qU=5, wires=10, ansatz=bruhat, device=default.qubit, diff_method=best
+Steps: 300, lr: 0.4, lambdas: st=0.1, ent=0.15, ort=0.01
+
+Best projected GI loss: 52 (step 12, via random_order_4)
+Valid permutation: True
+Edge mismatch: 26 (Frobenius: 52)
+
+NOT SOLVED: projected loss did not reach zero (heuristic — this does NOT prove non-isomorphism).
+
+Hidden-permutation overlap: 0.062 (diagnostic only; automorphisms allow other valid certificates)
+Elapsed: 29.1 s
+
+Recovered mapping sigma (A-vertex i -> B-vertex sigma(i)):
+    0 -> 2
+    1 -> 6
+    2 -> 8
+    3 -> 3
+    4 -> 13
+    5 -> 9
+    6 -> 5
+    7 -> 7
+    8 -> 10
+    9 -> 11
+   10 -> 0
+   11 -> 1
+   12 -> 4
+   13 -> 14
+   14 -> 15
+   15 -> 12

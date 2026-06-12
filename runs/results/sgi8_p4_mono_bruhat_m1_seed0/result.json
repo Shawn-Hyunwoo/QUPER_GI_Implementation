@@ -1,0 +1,21 @@
+{
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 5.71283120000183,
+      "grad_norm": 0.6970594903612901,
+      "p_hat_entropy": 15.74923414719548,
+      "projection_residual": 2.6955008178023774,
+      "distinct_perms": 1,
+      "projected_loss": 0.0,
+      "projection": "random_order_32",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 0.0
+    }
+  ],
+  "value": 0.0,
+  "step": 0,
+  "projection": "random_order_32",
+  "final_mismatch": 12.0,
+  "final_masked_mismatch": 0.0
+}

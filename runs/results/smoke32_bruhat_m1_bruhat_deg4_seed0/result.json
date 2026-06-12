@@ -1,0 +1,2410 @@
+{
+  "best_value": 136.0,
+  "best_step": 120,
+  "best_projection": "hungarian",
+  "best_ancillas": null,
+  "elapsed_seconds": 54.258380888961256,
+  "stages": null,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 123.78363900286351,
+      "projected_loss": 196.0,
+      "projection": "random_order_44",
+      "hidden_overlap": 0.09375,
+      "best_projected_loss": 196.0
+    },
+    {
+      "step": 1,
+      "train_loss": 123.17395066461313,
+      "projected_loss": 196.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.09375,
+      "best_projected_loss": 196.0
+    },
+    {
+      "step": 2,
+      "train_loss": 122.34924594554361,
+      "projected_loss": 192.0,
+      "projection": "random_order_29",
+      "hidden_overlap": 0.09375,
+      "best_projected_loss": 192.0
+    },
+    {
+      "step": 3,
+      "train_loss": 120.12854736907776,
+      "projected_loss": 196.0,
+      "projection": "random_order_39",
+      "hidden_overlap": 0.09375,
+      "best_projected_loss": 192.0
+    },
+    {
+      "step": 4,
+      "train_loss": 117.5019529581212,
+      "projected_loss": 192.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.09375,
+      "best_projected_loss": 192.0
+    },
+    {
+      "step": 5,
+      "train_loss": 116.19587463766041,
+      "projected_loss": 192.0,
+      "projection": "random_order_4",
+      "hidden_overlap": 0.09375,
+      "best_projected_loss": 192.0
+    },
+    {
+      "step": 6,
+      "train_loss": 114.04140577871135,
+      "projected_loss": 176.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.1875,
+      "best_projected_loss": 176.0
+    },
+    {
+      "step": 7,
+      "train_loss": 112.73003876121419,
+      "projected_loss": 176.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.1875,
+      "best_projected_loss": 176.0
+    },
+    {
+      "step": 8,
+      "train_loss": 111.31563185177438,
+      "projected_loss": 176.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.1875,
+      "best_projected_loss": 176.0
+    },
+    {
+      "step": 9,
+      "train_loss": 109.71467541631546,
+      "projected_loss": 176.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.1875,
+      "best_projected_loss": 176.0
+    },
+    {
+      "step": 10,
+      "train_loss": 108.45573044363466,
+      "projected_loss": 184.0,
+      "projection": "random_order_11",
+      "hidden_overlap": 0.1875,
+      "best_projected_loss": 176.0
+    },
+    {
+      "step": 11,
+      "train_loss": 109.1723935649683,
+      "projected_loss": 172.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.15625,
+      "best_projected_loss": 172.0
+    },
+    {
+      "step": 12,
+      "train_loss": 108.50687796632782,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 164.0
+    },
+    {
+      "step": 13,
+      "train_loss": 107.49861694839151,
+      "projected_loss": 176.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 164.0
+    },
+    {
+      "step": 14,
+      "train_loss": 106.06207840987103,
+      "projected_loss": 180.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 164.0
+    },
+    {
+      "step": 15,
+      "train_loss": 105.81664282478687,
+      "projected_loss": 172.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 164.0
+    },
+    {
+      "step": 16,
+      "train_loss": 105.0508876707455,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 164.0
+    },
+    {
+      "step": 17,
+      "train_loss": 103.84151088635248,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 18,
+      "train_loss": 103.18095697793802,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 19,
+      "train_loss": 102.91137706435303,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 20,
+      "train_loss": 103.13302548815943,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 21,
+      "train_loss": 103.36695818469214,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 22,
+      "train_loss": 103.10152370375111,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 23,
+      "train_loss": 102.62383646328801,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 24,
+      "train_loss": 101.98707617467383,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 25,
+      "train_loss": 101.70297597652441,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 26,
+      "train_loss": 101.61772944940947,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 27,
+      "train_loss": 101.83185004383611,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 28,
+      "train_loss": 102.00275284301105,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 29,
+      "train_loss": 101.86884838136389,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 30,
+      "train_loss": 101.6294157490005,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 31,
+      "train_loss": 101.3917703881177,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 32,
+      "train_loss": 101.2128089924642,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 33,
+      "train_loss": 101.19745635485162,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 34,
+      "train_loss": 101.08031531917679,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 35,
+      "train_loss": 100.99729320890268,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 36,
+      "train_loss": 101.02117270756912,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 37,
+      "train_loss": 100.92892754583114,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 38,
+      "train_loss": 100.8402213972401,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 39,
+      "train_loss": 100.78105937535634,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 40,
+      "train_loss": 100.69723077904943,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 41,
+      "train_loss": 100.64418704940715,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 42,
+      "train_loss": 100.57418231257432,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 43,
+      "train_loss": 100.54278303706582,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 44,
+      "train_loss": 100.47764749706792,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.21875,
+      "best_projected_loss": 160.0
+    },
+    {
+      "step": 45,
+      "train_loss": 100.41634224331533,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 46,
+      "train_loss": 100.3313623721477,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 47,
+      "train_loss": 100.18788887470618,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 48,
+      "train_loss": 100.13655956291244,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 49,
+      "train_loss": 100.11465644686042,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 50,
+      "train_loss": 100.10386215085997,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 51,
+      "train_loss": 100.11391831877816,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 52,
+      "train_loss": 100.1380946774069,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 53,
+      "train_loss": 100.11260795295158,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 54,
+      "train_loss": 100.03871989577127,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 55,
+      "train_loss": 100.0310982548977,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 56,
+      "train_loss": 100.06003865305017,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 57,
+      "train_loss": 100.03050061965085,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 58,
+      "train_loss": 100.01509446244228,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 59,
+      "train_loss": 100.00419935659852,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 60,
+      "train_loss": 100.00117112344492,
+      "projected_loss": 168.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 61,
+      "train_loss": 100.00423781750963,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 62,
+      "train_loss": 100.00550126128643,
+      "projected_loss": 160.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 63,
+      "train_loss": 100.00507027571996,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 64,
+      "train_loss": 99.9782567513706,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 65,
+      "train_loss": 99.96474928946837,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 66,
+      "train_loss": 99.95205352699983,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 67,
+      "train_loss": 99.94872081782174,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 68,
+      "train_loss": 99.94526274491335,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 69,
+      "train_loss": 99.94436855462975,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 152.0
+    },
+    {
+      "step": 70,
+      "train_loss": 99.93625429840124,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 71,
+      "train_loss": 99.92959134998385,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 72,
+      "train_loss": 99.93481216371606,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 73,
+      "train_loss": 99.94330780444899,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 74,
+      "train_loss": 99.93662482537738,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 75,
+      "train_loss": 99.92752984887969,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 76,
+      "train_loss": 99.92465154978152,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 77,
+      "train_loss": 99.91818671103421,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 78,
+      "train_loss": 99.91582353801014,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 79,
+      "train_loss": 99.91328975473955,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 80,
+      "train_loss": 99.90587140160363,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 81,
+      "train_loss": 99.89652624882126,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 82,
+      "train_loss": 99.88693429694678,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 83,
+      "train_loss": 99.87249632874811,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 84,
+      "train_loss": 99.84853800396606,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 85,
+      "train_loss": 99.80235629345981,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 86,
+      "train_loss": 99.71791594953578,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 87,
+      "train_loss": 99.57809865449134,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 88,
+      "train_loss": 99.39850104735122,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 89,
+      "train_loss": 99.32661342413573,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 90,
+      "train_loss": 99.46496949144161,
+      "projected_loss": 164.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 91,
+      "train_loss": 99.80406169720777,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 92,
+      "train_loss": 100.21259000482131,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 93,
+      "train_loss": 100.09953912941265,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 94,
+      "train_loss": 99.20680680091571,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 95,
+      "train_loss": 98.90317497277958,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 96,
+      "train_loss": 99.37268859935303,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 97,
+      "train_loss": 98.63790051458332,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 98,
+      "train_loss": 98.35202809474613,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 99,
+      "train_loss": 98.65127728243927,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 100,
+      "train_loss": 98.32999502145664,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 101,
+      "train_loss": 97.90511441241753,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.25,
+      "best_projected_loss": 148.0
+    },
+    {
+      "step": 102,
+      "train_loss": 98.21128809184232,
+      "projected_loss": 140.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 103,
+      "train_loss": 98.09986690968167,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 104,
+      "train_loss": 97.86784716909379,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 105,
+      "train_loss": 98.11478677819625,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 106,
+      "train_loss": 97.95939471241638,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 107,
+      "train_loss": 97.68314666781231,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 108,
+      "train_loss": 97.90963069333046,
+      "projected_loss": 140.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 109,
+      "train_loss": 97.82209196287054,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 110,
+      "train_loss": 97.52613395584649,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 111,
+      "train_loss": 97.6375960056634,
+      "projected_loss": 140.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 112,
+      "train_loss": 97.71724481495251,
+      "projected_loss": 140.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 113,
+      "train_loss": 97.47783733296227,
+      "projected_loss": 140.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 114,
+      "train_loss": 97.44784289574983,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 115,
+      "train_loss": 97.47721142683265,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 116,
+      "train_loss": 97.35860575652939,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 117,
+      "train_loss": 97.2689708907115,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 118,
+      "train_loss": 97.34468847092944,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 119,
+      "train_loss": 97.27588328994766,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 140.0
+    },
+    {
+      "step": 120,
+      "train_loss": 97.327026514448,
+      "projected_loss": 136.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 121,
+      "train_loss": 97.6379367255372,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 122,
+      "train_loss": 98.23512662190332,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 123,
+      "train_loss": 98.46744871225926,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 124,
+      "train_loss": 97.91292842553298,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 125,
+      "train_loss": 97.16164125064108,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 126,
+      "train_loss": 97.97529904106229,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 127,
+      "train_loss": 98.14032028888307,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 128,
+      "train_loss": 97.21518428984969,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 129,
+      "train_loss": 97.86992689657158,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 130,
+      "train_loss": 97.64741290010974,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 131,
+      "train_loss": 97.37157963163165,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 132,
+      "train_loss": 97.69186799024321,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 133,
+      "train_loss": 97.3577049712735,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 134,
+      "train_loss": 97.48534930513588,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 135,
+      "train_loss": 97.2865485644358,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 136,
+      "train_loss": 97.27948222280125,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 137,
+      "train_loss": 97.29363910647925,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 138,
+      "train_loss": 97.10688435495663,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 139,
+      "train_loss": 97.25813036248212,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 140,
+      "train_loss": 97.08143240739783,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 141,
+      "train_loss": 97.08870078878417,
+      "projected_loss": 152.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 142,
+      "train_loss": 97.10966665612766,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 143,
+      "train_loss": 96.93739276506476,
+      "projected_loss": 156.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 144,
+      "train_loss": 96.9866031977645,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 145,
+      "train_loss": 96.86931256190039,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 146,
+      "train_loss": 96.77427126700299,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 147,
+      "train_loss": 96.74320973314279,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 148,
+      "train_loss": 96.58719746607889,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 149,
+      "train_loss": 96.53958442577206,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 150,
+      "train_loss": 96.38581869657122,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 151,
+      "train_loss": 96.30490635829364,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 152,
+      "train_loss": 96.1460738532041,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 153,
+      "train_loss": 96.05149569593965,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 154,
+      "train_loss": 95.94717446002116,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 155,
+      "train_loss": 95.94669156492559,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 156,
+      "train_loss": 95.97146602382955,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 157,
+      "train_loss": 96.024948126027,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 158,
+      "train_loss": 96.01848017251575,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 159,
+      "train_loss": 96.0092265287375,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 160,
+      "train_loss": 95.95949745508499,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 161,
+      "train_loss": 95.94201231850855,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 162,
+      "train_loss": 95.91819312092427,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 163,
+      "train_loss": 95.91196774774346,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 164,
+      "train_loss": 95.90334424958257,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 165,
+      "train_loss": 95.90001404282648,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 166,
+      "train_loss": 95.90098402205818,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 167,
+      "train_loss": 95.90078843704967,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 168,
+      "train_loss": 95.87562170694557,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 169,
+      "train_loss": 95.85998680903475,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 170,
+      "train_loss": 95.82433530122846,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 171,
+      "train_loss": 95.82728587820199,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 172,
+      "train_loss": 95.81986383889927,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 173,
+      "train_loss": 95.8240789315135,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 174,
+      "train_loss": 95.81788968386701,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 175,
+      "train_loss": 95.8115711952077,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 176,
+      "train_loss": 95.81044007153406,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 177,
+      "train_loss": 95.81039986907429,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 178,
+      "train_loss": 95.80908162971276,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 179,
+      "train_loss": 95.8074475880111,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 180,
+      "train_loss": 95.79834772685527,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 181,
+      "train_loss": 95.79375205099839,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 182,
+      "train_loss": 95.7896750177921,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 183,
+      "train_loss": 95.79149163332761,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 184,
+      "train_loss": 95.79364246489689,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 185,
+      "train_loss": 95.78932304043204,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 186,
+      "train_loss": 95.78502193702845,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 187,
+      "train_loss": 95.78042898133428,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 188,
+      "train_loss": 95.77958319091412,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 189,
+      "train_loss": 95.77807630132996,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 190,
+      "train_loss": 95.77905455208486,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 191,
+      "train_loss": 95.77949393173566,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 192,
+      "train_loss": 95.77925598731599,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 193,
+      "train_loss": 95.77872452256844,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 194,
+      "train_loss": 95.77816673363183,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 195,
+      "train_loss": 95.77729150466728,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 196,
+      "train_loss": 95.7759934628367,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 197,
+      "train_loss": 95.77591660764563,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 198,
+      "train_loss": 95.77562744672322,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 199,
+      "train_loss": 95.77628960955404,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 200,
+      "train_loss": 95.77598374195422,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 201,
+      "train_loss": 95.77504375840365,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 202,
+      "train_loss": 95.77398858218605,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 203,
+      "train_loss": 95.77334524606337,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 204,
+      "train_loss": 95.7735129139872,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 205,
+      "train_loss": 95.77382061554994,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 206,
+      "train_loss": 95.77385183082022,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 207,
+      "train_loss": 95.77329541920939,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 208,
+      "train_loss": 95.77287897915419,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 209,
+      "train_loss": 95.77273771817586,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 210,
+      "train_loss": 95.77283487271774,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 211,
+      "train_loss": 95.7728299997484,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 212,
+      "train_loss": 95.77246618104625,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 213,
+      "train_loss": 95.77227871109048,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 214,
+      "train_loss": 95.772127455165,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 215,
+      "train_loss": 95.77209478626713,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 216,
+      "train_loss": 95.77210053230577,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 217,
+      "train_loss": 95.77194445357875,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 218,
+      "train_loss": 95.77184541476124,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 219,
+      "train_loss": 95.77177962783715,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 220,
+      "train_loss": 95.77183162195163,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 221,
+      "train_loss": 95.77178763782351,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 222,
+      "train_loss": 95.77170414712126,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 223,
+      "train_loss": 95.77161151206062,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 224,
+      "train_loss": 95.77153272143792,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 225,
+      "train_loss": 95.77154613043795,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 226,
+      "train_loss": 95.77150498800236,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 227,
+      "train_loss": 95.77143359879696,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 228,
+      "train_loss": 95.77136526639885,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 229,
+      "train_loss": 95.77132458883213,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 230,
+      "train_loss": 95.77130922071217,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 231,
+      "train_loss": 95.77128828819669,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 232,
+      "train_loss": 95.77125876317795,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 233,
+      "train_loss": 95.77121829636918,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 234,
+      "train_loss": 95.7711956204898,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 235,
+      "train_loss": 95.77120347859206,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 236,
+      "train_loss": 95.77118811449387,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 237,
+      "train_loss": 95.77117768210152,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 238,
+      "train_loss": 95.77115227506522,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 239,
+      "train_loss": 95.77111738011719,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 240,
+      "train_loss": 95.77108889750708,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 241,
+      "train_loss": 95.77106152090386,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 242,
+      "train_loss": 95.77104021060676,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 243,
+      "train_loss": 95.77101967805855,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 244,
+      "train_loss": 95.77100859672578,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 245,
+      "train_loss": 95.77100207541781,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 246,
+      "train_loss": 95.77099320331658,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 247,
+      "train_loss": 95.77099378210553,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 248,
+      "train_loss": 95.77101059634751,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 249,
+      "train_loss": 95.77105554022546,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 250,
+      "train_loss": 95.77115551134577,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 251,
+      "train_loss": 95.77134405075438,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 252,
+      "train_loss": 95.77170811950678,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 253,
+      "train_loss": 95.77242412125176,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 254,
+      "train_loss": 95.77387330381312,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 255,
+      "train_loss": 95.77680834300494,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 256,
+      "train_loss": 95.78292060249666,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 257,
+      "train_loss": 95.79550126577023,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 258,
+      "train_loss": 95.82236809647361,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 259,
+      "train_loss": 95.87651535747415,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 260,
+      "train_loss": 95.98723947480535,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 261,
+      "train_loss": 96.16752724260002,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 262,
+      "train_loss": 96.41210191369963,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 263,
+      "train_loss": 96.48737573252549,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 264,
+      "train_loss": 96.28095203665897,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 265,
+      "train_loss": 95.93526074809192,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 266,
+      "train_loss": 95.83547043372214,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 267,
+      "train_loss": 95.98936549325111,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 268,
+      "train_loss": 96.18506736627452,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 269,
+      "train_loss": 96.2040949267489,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 270,
+      "train_loss": 95.98948138455714,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 271,
+      "train_loss": 95.83397644051776,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 272,
+      "train_loss": 95.87831252175245,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 273,
+      "train_loss": 96.0116091388491,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 274,
+      "train_loss": 96.05485283226857,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 275,
+      "train_loss": 95.93351382335423,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 276,
+      "train_loss": 95.82365673611724,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 277,
+      "train_loss": 95.82879221158588,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 278,
+      "train_loss": 95.9153867018092,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 279,
+      "train_loss": 95.96333660693958,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 280,
+      "train_loss": 95.88603200008002,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 281,
+      "train_loss": 95.79177031848758,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 282,
+      "train_loss": 95.79646985911766,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 283,
+      "train_loss": 95.86407085497883,
+      "projected_loss": 148.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 284,
+      "train_loss": 95.88492980995451,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 285,
+      "train_loss": 95.83806892947267,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 286,
+      "train_loss": 95.79019673524034,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 287,
+      "train_loss": 95.78767401738308,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 288,
+      "train_loss": 95.8159109693482,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 289,
+      "train_loss": 95.83576232716058,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 290,
+      "train_loss": 95.82590947940763,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 291,
+      "train_loss": 95.79341037115913,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 292,
+      "train_loss": 95.77519754006867,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 293,
+      "train_loss": 95.78757837996012,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 294,
+      "train_loss": 95.80760576677058,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 295,
+      "train_loss": 95.81131807601113,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 296,
+      "train_loss": 95.79480082134963,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 297,
+      "train_loss": 95.77713568078613,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 298,
+      "train_loss": 95.77489150932257,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    },
+    {
+      "step": 299,
+      "train_loss": 95.78387542543148,
+      "projected_loss": 144.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.34375,
+      "best_projected_loss": 136.0
+    }
+  ]
+}

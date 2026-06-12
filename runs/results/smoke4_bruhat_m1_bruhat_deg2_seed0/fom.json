@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "best_projected_loss": 0.0,
+  "best_step": 0,
+  "soft_hard_gap": 4.621,
+  "edge_mismatch": 0,
+  "total_edges": 4,
+  "edge_mismatch_normalized": 0.0,
+  "projection_method": "hungarian",
+  "elapsed_seconds": 0.03
+}

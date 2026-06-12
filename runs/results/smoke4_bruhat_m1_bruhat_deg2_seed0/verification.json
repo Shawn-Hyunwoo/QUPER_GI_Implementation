@@ -1,0 +1,13 @@
+{
+  "valid_permutation": true,
+  "frobenius_mismatch": 0.0,
+  "edge_mismatch": 0,
+  "success": true,
+  "hidden_overlap": 0.5,
+  "sigma": [
+    3,
+    0,
+    1,
+    2
+  ]
+}

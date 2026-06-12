@@ -1,0 +1,2410 @@
+{
+  "best_value": 52.0,
+  "best_step": 12,
+  "best_projection": "random_order_4",
+  "best_ancillas": null,
+  "elapsed_seconds": 29.054544229991734,
+  "stages": null,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 54.1561404434941,
+      "projected_loss": 72.0,
+      "projection": "random_order_3",
+      "hidden_overlap": 0.125,
+      "best_projected_loss": 72.0
+    },
+    {
+      "step": 1,
+      "train_loss": 51.3452619136787,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.125,
+      "best_projected_loss": 72.0
+    },
+    {
+      "step": 2,
+      "train_loss": 50.327104079273816,
+      "projected_loss": 72.0,
+      "projection": "random_order_28",
+      "hidden_overlap": 0.125,
+      "best_projected_loss": 72.0
+    },
+    {
+      "step": 3,
+      "train_loss": 49.217643035974234,
+      "projected_loss": 64.0,
+      "projection": "random_order_42",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 4,
+      "train_loss": 48.22008496357543,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 5,
+      "train_loss": 47.56224254505191,
+      "projected_loss": 64.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 6,
+      "train_loss": 47.18187998443374,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 7,
+      "train_loss": 47.11340774859563,
+      "projected_loss": 76.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 8,
+      "train_loss": 46.88987861501442,
+      "projected_loss": 72.0,
+      "projection": "random_order_27",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 9,
+      "train_loss": 46.57895566955895,
+      "projected_loss": 76.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 10,
+      "train_loss": 46.1561545342307,
+      "projected_loss": 68.0,
+      "projection": "random_order_23",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 11,
+      "train_loss": 46.00241811760174,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 64.0
+    },
+    {
+      "step": 12,
+      "train_loss": 45.882125029614414,
+      "projected_loss": 52.0,
+      "projection": "random_order_4",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 13,
+      "train_loss": 45.742951280407034,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 14,
+      "train_loss": 45.74062568721052,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 15,
+      "train_loss": 45.47089373431973,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 16,
+      "train_loss": 45.22110138735565,
+      "projected_loss": 64.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 17,
+      "train_loss": 45.11411534520549,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 18,
+      "train_loss": 45.03821311634495,
+      "projected_loss": 72.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 19,
+      "train_loss": 44.9819174162089,
+      "projected_loss": 72.0,
+      "projection": "random_order_38",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 20,
+      "train_loss": 44.68107064027316,
+      "projected_loss": 76.0,
+      "projection": "random_order_3",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 21,
+      "train_loss": 44.52407357271016,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 22,
+      "train_loss": 44.5447869002978,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 23,
+      "train_loss": 44.53607411496385,
+      "projected_loss": 72.0,
+      "projection": "random_order_12",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 24,
+      "train_loss": 44.51762055660186,
+      "projected_loss": 76.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 25,
+      "train_loss": 44.44953295305663,
+      "projected_loss": 72.0,
+      "projection": "random_order_28",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 26,
+      "train_loss": 44.37754590362204,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 27,
+      "train_loss": 44.37634102992956,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 28,
+      "train_loss": 44.35848906249771,
+      "projected_loss": 68.0,
+      "projection": "random_order_41",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 29,
+      "train_loss": 44.313434441714705,
+      "projected_loss": 60.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 30,
+      "train_loss": 44.29620599382311,
+      "projected_loss": 64.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 31,
+      "train_loss": 44.23799595728167,
+      "projected_loss": 64.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 32,
+      "train_loss": 44.15740670578272,
+      "projected_loss": 64.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 33,
+      "train_loss": 44.07013615143204,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 34,
+      "train_loss": 43.99892599842718,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 35,
+      "train_loss": 43.976134191751306,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 36,
+      "train_loss": 43.9395807676144,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 37,
+      "train_loss": 43.879259282608125,
+      "projected_loss": 60.0,
+      "projection": "random_order_49",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 38,
+      "train_loss": 43.80288983895825,
+      "projected_loss": 68.0,
+      "projection": "random_order_28",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 39,
+      "train_loss": 43.7106614061545,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 40,
+      "train_loss": 43.610659026967106,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 41,
+      "train_loss": 43.497984051169205,
+      "projected_loss": 68.0,
+      "projection": "random_order_27",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 42,
+      "train_loss": 43.404707398424776,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 43,
+      "train_loss": 43.39388022715446,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 44,
+      "train_loss": 43.43784611586494,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 45,
+      "train_loss": 43.42246206297058,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 46,
+      "train_loss": 43.34357648215607,
+      "projected_loss": 60.0,
+      "projection": "random_order_12",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 47,
+      "train_loss": 43.30010033883875,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 48,
+      "train_loss": 43.31030474499339,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 49,
+      "train_loss": 43.33471302688388,
+      "projected_loss": 68.0,
+      "projection": "random_order_28",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 50,
+      "train_loss": 43.342308509305035,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 51,
+      "train_loss": 43.325107385756155,
+      "projected_loss": 60.0,
+      "projection": "random_order_20",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 52,
+      "train_loss": 43.30484749639746,
+      "projected_loss": 68.0,
+      "projection": "random_order_12",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 53,
+      "train_loss": 43.29538856144954,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 54,
+      "train_loss": 43.286969513652664,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 55,
+      "train_loss": 43.286705771937314,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 56,
+      "train_loss": 43.29365667443451,
+      "projected_loss": 64.0,
+      "projection": "random_order_30",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 57,
+      "train_loss": 43.28985531411286,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 58,
+      "train_loss": 43.27172008443163,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 59,
+      "train_loss": 43.25814992610799,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 60,
+      "train_loss": 43.25173256975047,
+      "projected_loss": 68.0,
+      "projection": "random_order_4",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 61,
+      "train_loss": 43.24794985069869,
+      "projected_loss": 68.0,
+      "projection": "random_order_45",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 62,
+      "train_loss": 43.247706212571075,
+      "projected_loss": 68.0,
+      "projection": "random_order_1",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 63,
+      "train_loss": 43.24706368449164,
+      "projected_loss": 64.0,
+      "projection": "random_order_8",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 64,
+      "train_loss": 43.24037811984767,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 65,
+      "train_loss": 43.22148847280977,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 66,
+      "train_loss": 43.201355403106376,
+      "projected_loss": 64.0,
+      "projection": "random_order_15",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 67,
+      "train_loss": 43.188810890597104,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 68,
+      "train_loss": 43.179590697885125,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 69,
+      "train_loss": 43.16941059949472,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 70,
+      "train_loss": 43.1608285784231,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 71,
+      "train_loss": 43.15332978620649,
+      "projected_loss": 64.0,
+      "projection": "random_order_36",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 72,
+      "train_loss": 43.147414300721074,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 73,
+      "train_loss": 43.141603128468816,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 74,
+      "train_loss": 43.13592235495402,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 75,
+      "train_loss": 43.132356837823515,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 76,
+      "train_loss": 43.12885850563819,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 77,
+      "train_loss": 43.124683462513126,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 78,
+      "train_loss": 43.12104719348428,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 79,
+      "train_loss": 43.11517536724379,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 80,
+      "train_loss": 43.10789789091974,
+      "projected_loss": 68.0,
+      "projection": "random_order_44",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 81,
+      "train_loss": 43.09929361521847,
+      "projected_loss": 76.0,
+      "projection": "random_order_3",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 82,
+      "train_loss": 43.09072907205224,
+      "projected_loss": 72.0,
+      "projection": "random_order_44",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 83,
+      "train_loss": 43.08303929526508,
+      "projected_loss": 68.0,
+      "projection": "random_order_0",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 84,
+      "train_loss": 43.07641752207507,
+      "projected_loss": 68.0,
+      "projection": "random_order_19",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 85,
+      "train_loss": 43.07090509463581,
+      "projected_loss": 68.0,
+      "projection": "random_order_32",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 86,
+      "train_loss": 43.06595417904583,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 87,
+      "train_loss": 43.06117923563813,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 88,
+      "train_loss": 43.055755927435115,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 89,
+      "train_loss": 43.05089135853181,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 90,
+      "train_loss": 43.04721593795914,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 91,
+      "train_loss": 43.044317864329976,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 92,
+      "train_loss": 43.04013381572456,
+      "projected_loss": 76.0,
+      "projection": "random_order_20",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 93,
+      "train_loss": 43.034256757347286,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 94,
+      "train_loss": 43.02783195053482,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 95,
+      "train_loss": 43.02088095905092,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 96,
+      "train_loss": 43.012757517833954,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 97,
+      "train_loss": 43.00370461007166,
+      "projected_loss": 68.0,
+      "projection": "random_order_1",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 98,
+      "train_loss": 42.99494375129937,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 99,
+      "train_loss": 42.987656498938655,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 100,
+      "train_loss": 42.98338607514646,
+      "projected_loss": 64.0,
+      "projection": "random_order_24",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 101,
+      "train_loss": 42.9825013416393,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 102,
+      "train_loss": 42.983728070483444,
+      "projected_loss": 68.0,
+      "projection": "random_order_27",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 103,
+      "train_loss": 42.98493988661391,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 104,
+      "train_loss": 42.98410811810138,
+      "projected_loss": 64.0,
+      "projection": "random_order_9",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 105,
+      "train_loss": 42.98033652067684,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 106,
+      "train_loss": 42.97502362863291,
+      "projected_loss": 68.0,
+      "projection": "random_order_0",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 107,
+      "train_loss": 42.97072225283941,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 108,
+      "train_loss": 42.969025990782654,
+      "projected_loss": 64.0,
+      "projection": "random_order_49",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 109,
+      "train_loss": 42.969539985896674,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 110,
+      "train_loss": 42.97039788522307,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 111,
+      "train_loss": 42.97019584490868,
+      "projected_loss": 68.0,
+      "projection": "random_order_48",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 112,
+      "train_loss": 42.96905972166132,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 113,
+      "train_loss": 42.967326820724494,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 114,
+      "train_loss": 42.96518531666252,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 115,
+      "train_loss": 42.96285593572657,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 116,
+      "train_loss": 42.960585668853085,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 117,
+      "train_loss": 42.95878442856638,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 118,
+      "train_loss": 42.95760273451629,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 119,
+      "train_loss": 42.95659616678217,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 120,
+      "train_loss": 42.95524832677267,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 121,
+      "train_loss": 42.95353488789043,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 122,
+      "train_loss": 42.951584392968265,
+      "projected_loss": 68.0,
+      "projection": "random_order_23",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 123,
+      "train_loss": 42.949661870675236,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 124,
+      "train_loss": 42.94795718098051,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 125,
+      "train_loss": 42.946536553601604,
+      "projected_loss": 68.0,
+      "projection": "random_order_36",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 126,
+      "train_loss": 42.945294383465296,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 127,
+      "train_loss": 42.94402429861349,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 128,
+      "train_loss": 42.94261497123965,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 129,
+      "train_loss": 42.941168910299524,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 130,
+      "train_loss": 42.939779673400054,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 131,
+      "train_loss": 42.93844573591677,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 132,
+      "train_loss": 42.93709730102342,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 133,
+      "train_loss": 42.935590143847,
+      "projected_loss": 68.0,
+      "projection": "random_order_36",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 134,
+      "train_loss": 42.93389122742566,
+      "projected_loss": 64.0,
+      "projection": "random_order_45",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 135,
+      "train_loss": 42.932066873228344,
+      "projected_loss": 68.0,
+      "projection": "random_order_23",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 136,
+      "train_loss": 42.930137591003664,
+      "projected_loss": 68.0,
+      "projection": "random_order_21",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 137,
+      "train_loss": 42.92809328343896,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 138,
+      "train_loss": 42.92593571873451,
+      "projected_loss": 68.0,
+      "projection": "random_order_46",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 139,
+      "train_loss": 42.9236195562447,
+      "projected_loss": 68.0,
+      "projection": "random_order_30",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 140,
+      "train_loss": 42.92104555722857,
+      "projected_loss": 68.0,
+      "projection": "random_order_0",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 141,
+      "train_loss": 42.91808932168307,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 142,
+      "train_loss": 42.91466562932607,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 143,
+      "train_loss": 42.91074413503109,
+      "projected_loss": 68.0,
+      "projection": "random_order_43",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 144,
+      "train_loss": 42.906306395746824,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 145,
+      "train_loss": 42.90129625976956,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 146,
+      "train_loss": 42.89555511087644,
+      "projected_loss": 68.0,
+      "projection": "random_order_3",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 147,
+      "train_loss": 42.88885481301655,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 148,
+      "train_loss": 42.88096155848503,
+      "projected_loss": 68.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 149,
+      "train_loss": 42.87163096677814,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 150,
+      "train_loss": 42.86058297062352,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 151,
+      "train_loss": 42.84752676161064,
+      "projected_loss": 68.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 152,
+      "train_loss": 42.83228330926043,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 153,
+      "train_loss": 42.815110669170394,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 154,
+      "train_loss": 42.797213943199885,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 155,
+      "train_loss": 42.781439072483955,
+      "projected_loss": 68.0,
+      "projection": "random_order_42",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 156,
+      "train_loss": 42.772321356686476,
+      "projected_loss": 72.0,
+      "projection": "random_order_43",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 157,
+      "train_loss": 42.77391744401285,
+      "projected_loss": 72.0,
+      "projection": "random_order_28",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 158,
+      "train_loss": 42.784957280939416,
+      "projected_loss": 76.0,
+      "projection": "random_order_20",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 159,
+      "train_loss": 42.797644800738375,
+      "projected_loss": 64.0,
+      "projection": "random_order_21",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 160,
+      "train_loss": 42.803956389986176,
+      "projected_loss": 68.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 161,
+      "train_loss": 42.80391135186135,
+      "projected_loss": 76.0,
+      "projection": "random_order_44",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 162,
+      "train_loss": 42.80801063702935,
+      "projected_loss": 72.0,
+      "projection": "random_order_6",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 163,
+      "train_loss": 42.84134241465397,
+      "projected_loss": 76.0,
+      "projection": "random_order_43",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 164,
+      "train_loss": 42.94324728730608,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 165,
+      "train_loss": 43.0818094510406,
+      "projected_loss": 68.0,
+      "projection": "random_order_1",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 166,
+      "train_loss": 42.997376802235046,
+      "projected_loss": 76.0,
+      "projection": "random_order_33",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 167,
+      "train_loss": 42.807199176728474,
+      "projected_loss": 68.0,
+      "projection": "random_order_46",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 168,
+      "train_loss": 42.87324855729393,
+      "projected_loss": 68.0,
+      "projection": "random_order_33",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 169,
+      "train_loss": 42.95976029254836,
+      "projected_loss": 76.0,
+      "projection": "random_order_46",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 170,
+      "train_loss": 42.85292531003494,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 171,
+      "train_loss": 42.81021779935133,
+      "projected_loss": 76.0,
+      "projection": "random_order_3",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 172,
+      "train_loss": 42.87952297121123,
+      "projected_loss": 76.0,
+      "projection": "random_order_12",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 173,
+      "train_loss": 42.855935612693386,
+      "projected_loss": 72.0,
+      "projection": "random_order_37",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 174,
+      "train_loss": 42.792896527968445,
+      "projected_loss": 76.0,
+      "projection": "random_order_34",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 175,
+      "train_loss": 42.847327985785384,
+      "projected_loss": 72.0,
+      "projection": "random_order_40",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 176,
+      "train_loss": 42.83363098312407,
+      "projected_loss": 72.0,
+      "projection": "random_order_38",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 177,
+      "train_loss": 42.79154889921323,
+      "projected_loss": 76.0,
+      "projection": "random_order_16",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 178,
+      "train_loss": 42.82833341309168,
+      "projected_loss": 72.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 179,
+      "train_loss": 42.807759543937436,
+      "projected_loss": 76.0,
+      "projection": "random_order_19",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 180,
+      "train_loss": 42.7976578498205,
+      "projected_loss": 72.0,
+      "projection": "random_order_29",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 181,
+      "train_loss": 42.80007795587672,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 182,
+      "train_loss": 42.80133498379716,
+      "projected_loss": 72.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 183,
+      "train_loss": 42.794981444430725,
+      "projected_loss": 72.0,
+      "projection": "random_order_0",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 184,
+      "train_loss": 42.7858025875294,
+      "projected_loss": 76.0,
+      "projection": "random_order_30",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 185,
+      "train_loss": 42.799918283932726,
+      "projected_loss": 72.0,
+      "projection": "random_order_41",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 186,
+      "train_loss": 42.78581057318941,
+      "projected_loss": 68.0,
+      "projection": "random_order_20",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 187,
+      "train_loss": 42.78287794550353,
+      "projected_loss": 72.0,
+      "projection": "random_order_45",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 188,
+      "train_loss": 42.78877364557546,
+      "projected_loss": 76.0,
+      "projection": "random_order_16",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 189,
+      "train_loss": 42.78458739623828,
+      "projected_loss": 68.0,
+      "projection": "random_order_20",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 190,
+      "train_loss": 42.777921126336636,
+      "projected_loss": 72.0,
+      "projection": "random_order_19",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 191,
+      "train_loss": 42.782048697291195,
+      "projected_loss": 76.0,
+      "projection": "random_order_4",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 192,
+      "train_loss": 42.78585939005983,
+      "projected_loss": 72.0,
+      "projection": "random_order_47",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 193,
+      "train_loss": 42.77265476221359,
+      "projected_loss": 80.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 194,
+      "train_loss": 42.77980676069708,
+      "projected_loss": 72.0,
+      "projection": "random_order_16",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 195,
+      "train_loss": 42.78132732739955,
+      "projected_loss": 76.0,
+      "projection": "random_order_33",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 196,
+      "train_loss": 42.77172173222529,
+      "projected_loss": 72.0,
+      "projection": "random_order_11",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 197,
+      "train_loss": 42.77681027798748,
+      "projected_loss": 68.0,
+      "projection": "random_order_31",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 198,
+      "train_loss": 42.7767960100977,
+      "projected_loss": 72.0,
+      "projection": "random_order_11",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 199,
+      "train_loss": 42.77356240422714,
+      "projected_loss": 76.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 200,
+      "train_loss": 42.773631413390724,
+      "projected_loss": 72.0,
+      "projection": "random_order_46",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 201,
+      "train_loss": 42.774676311146386,
+      "projected_loss": 76.0,
+      "projection": "random_order_33",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 202,
+      "train_loss": 42.77382007466977,
+      "projected_loss": 72.0,
+      "projection": "random_order_29",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 203,
+      "train_loss": 42.77197097203641,
+      "projected_loss": 72.0,
+      "projection": "random_order_40",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 204,
+      "train_loss": 42.77319113824477,
+      "projected_loss": 68.0,
+      "projection": "random_order_21",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 205,
+      "train_loss": 42.77287113636086,
+      "projected_loss": 72.0,
+      "projection": "random_order_39",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 206,
+      "train_loss": 42.77197564280551,
+      "projected_loss": 72.0,
+      "projection": "random_order_34",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 207,
+      "train_loss": 42.77181108976322,
+      "projected_loss": 72.0,
+      "projection": "random_order_5",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 208,
+      "train_loss": 42.771765632564865,
+      "projected_loss": 72.0,
+      "projection": "random_order_21",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 209,
+      "train_loss": 42.77251116831191,
+      "projected_loss": 76.0,
+      "projection": "random_order_46",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 210,
+      "train_loss": 42.77100566917798,
+      "projected_loss": 68.0,
+      "projection": "random_order_40",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 211,
+      "train_loss": 42.77095432039317,
+      "projected_loss": 68.0,
+      "projection": "random_order_3",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 212,
+      "train_loss": 42.77238945074557,
+      "projected_loss": 76.0,
+      "projection": "random_order_8",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 213,
+      "train_loss": 42.77075590021531,
+      "projected_loss": 68.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 214,
+      "train_loss": 42.77053995634991,
+      "projected_loss": 64.0,
+      "projection": "random_order_44",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 215,
+      "train_loss": 42.7715276118172,
+      "projected_loss": 76.0,
+      "projection": "random_order_49",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 216,
+      "train_loss": 42.77087113834854,
+      "projected_loss": 68.0,
+      "projection": "random_order_0",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 217,
+      "train_loss": 42.77059393132158,
+      "projected_loss": 76.0,
+      "projection": "random_order_9",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 218,
+      "train_loss": 42.77066326876209,
+      "projected_loss": 72.0,
+      "projection": "random_order_13",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 219,
+      "train_loss": 42.770801964113176,
+      "projected_loss": 72.0,
+      "projection": "random_order_15",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 220,
+      "train_loss": 42.77067191594393,
+      "projected_loss": 76.0,
+      "projection": "random_order_32",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 221,
+      "train_loss": 42.77031302599358,
+      "projected_loss": 72.0,
+      "projection": "random_order_41",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 222,
+      "train_loss": 42.77049760317869,
+      "projected_loss": 64.0,
+      "projection": "random_order_12",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 223,
+      "train_loss": 42.77055426597971,
+      "projected_loss": 76.0,
+      "projection": "random_order_19",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 224,
+      "train_loss": 42.770440066043776,
+      "projected_loss": 72.0,
+      "projection": "random_order_5",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 225,
+      "train_loss": 42.77035767645881,
+      "projected_loss": 72.0,
+      "projection": "random_order_13",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 226,
+      "train_loss": 42.77024246230196,
+      "projected_loss": 68.0,
+      "projection": "random_order_21",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 227,
+      "train_loss": 42.770417770019066,
+      "projected_loss": 72.0,
+      "projection": "random_order_20",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 228,
+      "train_loss": 42.770395456968814,
+      "projected_loss": 76.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 229,
+      "train_loss": 42.770093305236955,
+      "projected_loss": 72.0,
+      "projection": "random_order_28",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 230,
+      "train_loss": 42.77021481267084,
+      "projected_loss": 72.0,
+      "projection": "random_order_16",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 231,
+      "train_loss": 42.7703659161385,
+      "projected_loss": 72.0,
+      "projection": "random_order_7",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 232,
+      "train_loss": 42.770191634809855,
+      "projected_loss": 72.0,
+      "projection": "random_order_45",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 233,
+      "train_loss": 42.770133668160746,
+      "projected_loss": 76.0,
+      "projection": "random_order_17",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 234,
+      "train_loss": 42.770186681877824,
+      "projected_loss": 68.0,
+      "projection": "random_order_13",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 235,
+      "train_loss": 42.770190812034464,
+      "projected_loss": 76.0,
+      "projection": "random_order_8",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 236,
+      "train_loss": 42.77017103660814,
+      "projected_loss": 72.0,
+      "projection": "random_order_18",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 237,
+      "train_loss": 42.77012378866368,
+      "projected_loss": 72.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 238,
+      "train_loss": 42.77011344283831,
+      "projected_loss": 64.0,
+      "projection": "random_order_22",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 239,
+      "train_loss": 42.77012986380793,
+      "projected_loss": 60.0,
+      "projection": "random_order_16",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 240,
+      "train_loss": 42.77014302507371,
+      "projected_loss": 76.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 241,
+      "train_loss": 42.77012686169195,
+      "projected_loss": 64.0,
+      "projection": "random_order_5",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 242,
+      "train_loss": 42.77007642848767,
+      "projected_loss": 60.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 243,
+      "train_loss": 42.77008019600694,
+      "projected_loss": 80.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 244,
+      "train_loss": 42.77012221414314,
+      "projected_loss": 76.0,
+      "projection": "random_order_42",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 245,
+      "train_loss": 42.77010800032588,
+      "projected_loss": 68.0,
+      "projection": "random_order_13",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 246,
+      "train_loss": 42.77006759202929,
+      "projected_loss": 72.0,
+      "projection": "random_order_22",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 247,
+      "train_loss": 42.77006627561193,
+      "projected_loss": 68.0,
+      "projection": "random_order_27",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 248,
+      "train_loss": 42.770086000478386,
+      "projected_loss": 72.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 249,
+      "train_loss": 42.770087740113986,
+      "projected_loss": 72.0,
+      "projection": "random_order_19",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 250,
+      "train_loss": 42.77007251047461,
+      "projected_loss": 76.0,
+      "projection": "random_order_40",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 251,
+      "train_loss": 42.77006284218295,
+      "projected_loss": 68.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 252,
+      "train_loss": 42.77006323693694,
+      "projected_loss": 80.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 253,
+      "train_loss": 42.770061783990855,
+      "projected_loss": 72.0,
+      "projection": "random_order_13",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 254,
+      "train_loss": 42.770066270059175,
+      "projected_loss": 80.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 255,
+      "train_loss": 42.770070972213695,
+      "projected_loss": 72.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 256,
+      "train_loss": 42.77005740283773,
+      "projected_loss": 68.0,
+      "projection": "random_order_43",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 257,
+      "train_loss": 42.77004727423995,
+      "projected_loss": 72.0,
+      "projection": "random_order_21",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 258,
+      "train_loss": 42.770057155467704,
+      "projected_loss": 76.0,
+      "projection": "random_order_23",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 259,
+      "train_loss": 42.77006260330237,
+      "projected_loss": 76.0,
+      "projection": "random_order_13",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 260,
+      "train_loss": 42.770057469184025,
+      "projected_loss": 72.0,
+      "projection": "random_order_15",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 261,
+      "train_loss": 42.770052931016764,
+      "projected_loss": 68.0,
+      "projection": "random_order_23",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 262,
+      "train_loss": 42.770049655455445,
+      "projected_loss": 72.0,
+      "projection": "random_order_25",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 263,
+      "train_loss": 42.77005005945097,
+      "projected_loss": 68.0,
+      "projection": "random_order_23",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 264,
+      "train_loss": 42.77005268269379,
+      "projected_loss": 68.0,
+      "projection": "random_order_21",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 265,
+      "train_loss": 42.77005229913634,
+      "projected_loss": 64.0,
+      "projection": "random_order_28",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 266,
+      "train_loss": 42.77005157278023,
+      "projected_loss": 64.0,
+      "projection": "random_order_37",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 267,
+      "train_loss": 42.770050875892885,
+      "projected_loss": 76.0,
+      "projection": "random_order_25",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 268,
+      "train_loss": 42.770047039615015,
+      "projected_loss": 68.0,
+      "projection": "random_order_16",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 269,
+      "train_loss": 42.77004524343574,
+      "projected_loss": 64.0,
+      "projection": "random_order_48",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 270,
+      "train_loss": 42.770048886361856,
+      "projected_loss": 64.0,
+      "projection": "random_order_25",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 271,
+      "train_loss": 42.770050724947964,
+      "projected_loss": 76.0,
+      "projection": "random_order_48",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 272,
+      "train_loss": 42.7700486340818,
+      "projected_loss": 60.0,
+      "projection": "random_order_11",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 273,
+      "train_loss": 42.77004726835647,
+      "projected_loss": 76.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 274,
+      "train_loss": 42.770046684685525,
+      "projected_loss": 64.0,
+      "projection": "random_order_47",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 275,
+      "train_loss": 42.770045768818306,
+      "projected_loss": 60.0,
+      "projection": "random_order_35",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 276,
+      "train_loss": 42.77004591683302,
+      "projected_loss": 72.0,
+      "projection": "random_order_13",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 277,
+      "train_loss": 42.770046392332866,
+      "projected_loss": 76.0,
+      "projection": "random_order_6",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 278,
+      "train_loss": 42.7700466689749,
+      "projected_loss": 76.0,
+      "projection": "random_order_29",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 279,
+      "train_loss": 42.77004726322588,
+      "projected_loss": 76.0,
+      "projection": "random_order_6",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 280,
+      "train_loss": 42.77004688908935,
+      "projected_loss": 76.0,
+      "projection": "random_order_34",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 281,
+      "train_loss": 42.77004541560261,
+      "projected_loss": 76.0,
+      "projection": "random_order_3",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 282,
+      "train_loss": 42.770044771073145,
+      "projected_loss": 64.0,
+      "projection": "random_order_19",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 283,
+      "train_loss": 42.770045142685255,
+      "projected_loss": 76.0,
+      "projection": "random_order_14",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 284,
+      "train_loss": 42.77004522198399,
+      "projected_loss": 76.0,
+      "projection": "random_order_32",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 285,
+      "train_loss": 42.77004514740077,
+      "projected_loss": 72.0,
+      "projection": "random_order_26",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 286,
+      "train_loss": 42.77004542569753,
+      "projected_loss": 72.0,
+      "projection": "random_order_10",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 287,
+      "train_loss": 42.77004567675182,
+      "projected_loss": 64.0,
+      "projection": "random_order_18",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 288,
+      "train_loss": 42.7700456586422,
+      "projected_loss": 72.0,
+      "projection": "random_order_46",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 289,
+      "train_loss": 42.77004553608015,
+      "projected_loss": 80.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 290,
+      "train_loss": 42.77004515676565,
+      "projected_loss": 60.0,
+      "projection": "random_order_47",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 291,
+      "train_loss": 42.77004470820714,
+      "projected_loss": 80.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 292,
+      "train_loss": 42.77004464260851,
+      "projected_loss": 72.0,
+      "projection": "random_order_2",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 293,
+      "train_loss": 42.77004471584816,
+      "projected_loss": 68.0,
+      "projection": "random_order_32",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 294,
+      "train_loss": 42.77004456376449,
+      "projected_loss": 72.0,
+      "projection": "random_order_9",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 295,
+      "train_loss": 42.770044442665935,
+      "projected_loss": 76.0,
+      "projection": "random_order_6",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 296,
+      "train_loss": 42.77004456185801,
+      "projected_loss": 76.0,
+      "projection": "random_order_42",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 297,
+      "train_loss": 42.770044717619044,
+      "projected_loss": 68.0,
+      "projection": "random_order_29",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 298,
+      "train_loss": 42.7700448135049,
+      "projected_loss": 68.0,
+      "projection": "random_order_36",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    },
+    {
+      "step": 299,
+      "train_loss": 42.77004490153131,
+      "projected_loss": 72.0,
+      "projection": "random_order_41",
+      "hidden_overlap": 0.0625,
+      "best_projected_loss": 52.0
+    }
+  ]
+}

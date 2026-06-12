@@ -1,0 +1,25 @@
+{
+  "valid_permutation": true,
+  "frobenius_mismatch": 52.0,
+  "edge_mismatch": 26,
+  "success": false,
+  "hidden_overlap": 0.0625,
+  "sigma": [
+    2,
+    6,
+    8,
+    3,
+    13,
+    9,
+    5,
+    7,
+    10,
+    11,
+    0,
+    1,
+    4,
+    14,
+    15,
+    12
+  ]
+}

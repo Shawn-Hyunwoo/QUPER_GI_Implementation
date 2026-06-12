@@ -1,0 +1,22 @@
+{
+  "best_value": 0.0,
+  "best_step": 0,
+  "best_projection": "hungarian",
+  "best_ancillas": null,
+  "elapsed_seconds": 0.03056840319186449,
+  "stages": null,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 4.6209522827440415,
+      "grad_norm": 0.8387098773784417,
+      "p_hat_entropy": 4.968834854194168,
+      "projection_residual": 1.4790372620522747,
+      "distinct_perms": 1,
+      "projected_loss": 0.0,
+      "projection": "hungarian",
+      "hidden_overlap": 0.5,
+      "best_projected_loss": 0.0
+    }
+  ]
+}

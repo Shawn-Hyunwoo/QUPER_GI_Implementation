@@ -1,0 +1,22 @@
+{
+  "num_vertices": 64,
+  "ancillas": 1,
+  "ansatz": "bruhat",
+  "device": "default.qubit",
+  "diff_method": "best",
+  "graph_p": 0.5,
+  "seed": 4,
+  "perm_source": "bruhat",
+  "steps": 300,
+  "lr": 0.4,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "eps": 1e-08,
+  "lambda_stochastic": 0.1,
+  "lambda_entropy": 0.15,
+  "lambda_orthogonal": 0.01,
+  "projection_interval": 1,
+  "num_random_projections": 50,
+  "pattern_size": 10,
+  "induced": false
+}
