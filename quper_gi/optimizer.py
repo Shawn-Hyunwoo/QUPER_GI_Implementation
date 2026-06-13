@@ -8,6 +8,7 @@ from math import log2
 import numpy as np
 import pennylane as qml
 from pennylane import numpy as pnp
+from scipy.optimize import minimize
 
 from .ansatz import transfer_theta
 from .configs import GIConfig
@@ -54,6 +55,32 @@ def _step_with_grad(opt, objective, theta):
     except Exception:
         new_theta, forward = opt.step_and_cost(objective, theta)
         return new_theta, float(forward), float("nan")
+
+
+def _step_with_spsa(
+    objective,
+    theta,
+    step: int,
+    rng: np.random.Generator,
+    cfg: GIConfig,
+):
+    """One SPSA update from two forward objective evaluations."""
+    theta_np = np.asarray(theta, dtype=np.float64)
+    k = step + 1
+    a0 = cfg.lr if cfg.spsa_a is None else cfg.spsa_a
+    a_k = a0 / (k**cfg.spsa_alpha)
+    c_k = cfg.spsa_c / (k**cfg.spsa_gamma)
+
+    delta = rng.choice([-1.0, 1.0], size=theta_np.shape)
+    loss_plus = float(objective(theta_np + c_k * delta))
+    loss_minus = float(objective(theta_np - c_k * delta))
+
+    grad_hat = ((loss_plus - loss_minus) / (2.0 * c_k)) * delta
+    next_theta = theta_np - a_k * grad_hat
+    loss_estimate = 0.5 * (loss_plus + loss_minus)
+    grad_norm = float(np.linalg.norm(grad_hat.ravel()))
+
+    return pnp.array(next_theta, requires_grad=True), loss_estimate, grad_norm
 
 
 def train_single_m(
@@ -112,8 +139,7 @@ def train_single_m(
         def score_fn(p_mat):
             return masked_mismatch(target_np, b_mat, p_mat, mask)
 
-    opt = qml.AdamOptimizer(stepsize=cfg.lr, beta1=cfg.beta1, beta2=cfg.beta2, eps=cfg.eps)
-    rng = np.random.default_rng(cfg.seed + 10_000)
+    projection_rng = np.random.default_rng(cfg.seed + 10_000)
     seen_perms: set[tuple[int, ...]] = set()
 
     best = {
@@ -125,6 +151,8 @@ def train_single_m(
     }
 
     history: list[dict] = []
+    optimizer_result: dict | None = None
+    success_announced = False
 
     def objective(current_theta):
         return total_loss(
@@ -132,10 +160,13 @@ def train_single_m(
             mask=mask_train, target_mat=target_train,
         )
 
-    print(model.summary())
-
-    for step in range(cfg.steps):
-        theta, loss_value, grad_norm = _step_with_grad(opt, objective, theta)
+    def record_history(
+        step: int,
+        theta_for_projection,
+        loss_value: float,
+        grad_norm: float,
+    ) -> bool:
+        nonlocal success_announced
 
         record = {
             "step": int(step),
@@ -144,13 +175,13 @@ def train_single_m(
         }
 
         if step % cfg.projection_interval == 0 or step == cfg.steps - 1:
-            p_hat = to_numpy_matrix(model(theta))
+            p_hat = to_numpy_matrix(model(theta_for_projection))
 
             p_proj, proj_value, proj_name = project_best(
                 p_hat=p_hat,
                 a_mat=a_mat,
                 b_mat=b_mat,
-                rng=rng,
+                rng=projection_rng,
                 num_random=cfg.num_random_projections,
                 score_fn=score_fn,
             )
@@ -165,7 +196,9 @@ def train_single_m(
                     {
                         "value": float(proj_value),
                         "p": p_proj,
-                        "theta": np.asarray(theta, dtype=np.float64).copy(),
+                        "theta": np.asarray(
+                            theta_for_projection, dtype=np.float64
+                        ).copy(),
                         "step": int(step),
                         "projection": proj_name,
                     }
@@ -186,17 +219,84 @@ def train_single_m(
                     f"via={proj_name}"
                 )
 
-            if best["value"] <= SUCCESS_TOL:
+            stop = best["value"] <= SUCCESS_TOL
+            if stop and not success_announced:
                 print("Success: projected GI loss reached zero.")
+                success_announced = True
+
+            if stop:
                 record["best_projected_loss"] = float(best["value"])
                 history.append(record)
-                break
+                return True
 
         record["best_projected_loss"] = float(best["value"])
         history.append(record)
+        return False
+
+    print(model.summary())
+
+    if cfg.optimizer == "adam":
+        opt = qml.AdamOptimizer(
+            stepsize=cfg.lr,
+            beta1=cfg.beta1,
+            beta2=cfg.beta2,
+            eps=cfg.eps,
+        )
+
+        for step in range(cfg.steps):
+            theta, loss_value, grad_norm = _step_with_grad(opt, objective, theta)
+            if record_history(step, theta, loss_value, grad_norm):
+                break
+
+    elif cfg.optimizer == "spsa":
+        spsa_rng = np.random.default_rng(cfg.seed + 20_000)
+
+        for step in range(cfg.steps):
+            theta, loss_value, grad_norm = _step_with_spsa(
+                objective, theta, step, spsa_rng, cfg
+            )
+            if record_history(step, theta, loss_value, grad_norm):
+                break
+
+    elif cfg.optimizer == "cobyla":
+        eval_count = 0
+
+        def scipy_objective(theta_vec):
+            nonlocal eval_count
+            current_theta = np.asarray(theta_vec, dtype=np.float64)
+            loss_value = float(objective(current_theta))
+            record_history(eval_count, current_theta, loss_value, float("nan"))
+            eval_count += 1
+            return loss_value
+
+        cobyla_result = minimize(
+            scipy_objective,
+            np.asarray(theta, dtype=np.float64),
+            method="COBYLA",
+            options={
+                "maxiter": cfg.steps,
+                "rhobeg": cfg.cobyla_rhobeg,
+                "tol": cfg.cobyla_tol,
+            },
+        )
+        theta = pnp.array(
+            np.asarray(cobyla_result.x, dtype=np.float64), requires_grad=True
+        )
+        optimizer_result = {
+            "success": bool(getattr(cobyla_result, "success", False)),
+            "status": int(getattr(cobyla_result, "status", 0)),
+            "message": str(getattr(cobyla_result, "message", "")),
+            "nfev": int(getattr(cobyla_result, "nfev", eval_count)),
+            "fun": float(getattr(cobyla_result, "fun", np.nan)),
+        }
+
+    else:
+        raise ValueError("optimizer must be one of 'adam', 'spsa', or 'cobyla'.")
 
     best["history"] = history
     best["theta_final"] = np.asarray(theta, dtype=np.float64).copy()
+    if optimizer_result is not None:
+        best["optimizer_result"] = optimizer_result
 
     if best["p"] is not None:
         best["final_mismatch"] = frobenius_mismatch(a_mat, b_mat, best["p"])

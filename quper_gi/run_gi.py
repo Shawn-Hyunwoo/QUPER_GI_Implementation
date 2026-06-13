@@ -39,7 +39,18 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
 
     parser.add_argument("--steps", type=int, default=_DEFAULTS.steps)
+    parser.add_argument(
+        "--optimizer",
+        choices=["adam", "spsa", "cobyla"],
+        default=_DEFAULTS.optimizer,
+    )
     parser.add_argument("--lr", type=float, default=_DEFAULTS.lr)
+    parser.add_argument("--spsa_a", type=float, default=_DEFAULTS.spsa_a)
+    parser.add_argument("--spsa_c", type=float, default=_DEFAULTS.spsa_c)
+    parser.add_argument("--spsa_alpha", type=float, default=_DEFAULTS.spsa_alpha)
+    parser.add_argument("--spsa_gamma", type=float, default=_DEFAULTS.spsa_gamma)
+    parser.add_argument("--cobyla_rhobeg", type=float, default=_DEFAULTS.cobyla_rhobeg)
+    parser.add_argument("--cobyla_tol", type=float, default=_DEFAULTS.cobyla_tol)
 
     parser.add_argument("--lambda_stochastic", type=float, default=_DEFAULTS.lambda_stochastic)
     parser.add_argument("--lambda_entropy", type=float, default=_DEFAULTS.lambda_entropy)
@@ -75,7 +86,14 @@ def config_from_args(args: argparse.Namespace) -> GIConfig:
         seed=args.seed,
         perm_source=args.perm_source,
         steps=args.steps,
+        optimizer=args.optimizer,
         lr=args.lr,
+        spsa_a=args.spsa_a,
+        spsa_c=args.spsa_c,
+        spsa_alpha=args.spsa_alpha,
+        spsa_gamma=args.spsa_gamma,
+        cobyla_rhobeg=args.cobyla_rhobeg,
+        cobyla_tol=args.cobyla_tol,
         lambda_stochastic=args.lambda_stochastic,
         lambda_entropy=args.lambda_entropy,
         lambda_orthogonal=args.lambda_orthogonal,
@@ -103,6 +121,7 @@ def save_outputs(
         "hidden_overlap": result.get("hidden_overlap"),
         "elapsed_seconds": result.get("elapsed_seconds"),
         "stages": result.get("stages"),
+        "optimizer_result": result.get("optimizer_result"),
         "history": result.get("history", []),
     }
 

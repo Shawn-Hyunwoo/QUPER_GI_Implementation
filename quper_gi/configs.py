@@ -7,6 +7,7 @@ from math import log2
 from typing import Literal
 
 AnsatzName = Literal["borel", "bruhat"]
+OptimizerName = Literal["adam", "spsa", "cobyla"]
 
 
 @dataclass(frozen=True)
@@ -42,10 +43,19 @@ class GIConfig:
     perm_source: str = "uniform"  # "uniform" | "borel" | "bruhat" (paper Fig. 18)
 
     steps: int = 200
+    optimizer: OptimizerName = "adam"
     lr: float = 0.4
     beta1: float = 0.9
     beta2: float = 0.999
     eps: float = 1.0e-8
+
+    spsa_a: float | None = None
+    spsa_c: float = 0.2
+    spsa_alpha: float = 0.602
+    spsa_gamma: float = 0.101
+
+    cobyla_rhobeg: float = 0.1
+    cobyla_tol: float = 1.0e-4
 
     lambda_stochastic: float = 0.1
     lambda_entropy: float = 0.15
@@ -71,6 +81,9 @@ def validate_config(cfg: GIConfig) -> tuple[int, int]:
     if cfg.ansatz not in {"borel", "bruhat"}:
         raise ValueError("ansatz must be either 'borel' or 'bruhat'.")
 
+    if cfg.optimizer not in {"adam", "spsa", "cobyla"}:
+        raise ValueError("optimizer must be one of 'adam', 'spsa', or 'cobyla'.")
+
     if cfg.projection_interval <= 0:
         raise ValueError("projection_interval must be positive.")
 
@@ -86,9 +99,23 @@ def summarize_config(cfg: GIConfig) -> str:
     """Return a concise human-readable config summary."""
     q, total_wires = validate_config(cfg)
     q_u = q + cfg.ancillas
+    optimizer_summary = f"optimizer={cfg.optimizer}"
+
+    if cfg.optimizer == "adam":
+        optimizer_summary += f", lr={cfg.lr}"
+    elif cfg.optimizer == "spsa":
+        spsa_a = cfg.lr if cfg.spsa_a is None else cfg.spsa_a
+        optimizer_summary += (
+            f", spsa_a={spsa_a}, spsa_c={cfg.spsa_c}, "
+            f"spsa_alpha={cfg.spsa_alpha}, spsa_gamma={cfg.spsa_gamma}"
+        )
+    elif cfg.optimizer == "cobyla":
+        optimizer_summary += (
+            f", cobyla_rhobeg={cfg.cobyla_rhobeg}, cobyla_tol={cfg.cobyla_tol}"
+        )
 
     return (
         f"N={cfg.num_vertices}, q={q}, m={cfg.ancillas}, "
         f"qU={q_u}, wires={total_wires}, ansatz={cfg.ansatz}, "
-        f"device={cfg.device}, diff_method={cfg.diff_method}"
+        f"device={cfg.device}, diff_method={cfg.diff_method}, {optimizer_summary}"
     )
