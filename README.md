@@ -205,22 +205,64 @@ pipeline. The reference paper PDF lives at `docs/QuPer_arXiv-2505.05981.pdf`
 
 ---
 
-## 5. Installation
+## 5. Installation & environment (CUDA / ROCm)
 
-> (한국어) 이 머신에서는 가상환경을 새로 만들지 말고 기존 `quantum_env` conda
-> 환경을 사용하세요 (CLAUDE.md 참조):
-> `/home/HW/miniconda3/bin/conda run -n quantum_env python ...`
+> (한국어) 소스 코드는 CUDA·ROCm 공통입니다. 차이는 **큰 케이스(N=256, 20큐빗)용
+> GPU statevector 백엔드**뿐입니다: `lightning.gpu`는 NVIDIA/cuStateVec 전용이라
+> AMD(ROCm)에는 빌드가 없습니다. 따라서 NVIDIA에서는 `lightning.gpu`, AMD에서는
+> `lightning.qubit`(멀티스레드 CPU)로 실행하세요. 작은 테스트는 어느 장비든
+> `default.qubit`/`lightning.qubit`로 동일하게 돌아갑니다.
 
-Recommended environment:
+The Python source is identical on CUDA and ROCm machines — only the **GPU
+statevector backend for the large case (N=256, 20 qubits)** differs. Everything
+else (small/medium runs on `default.qubit` / `lightning.qubit`) is identical on
+both platforms. Pick the setup that matches your GPU.
+
+### 5.0 Common (both platforms)
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+conda create -n quper_gi python=3.11 -y   # or: python -m venv .venv && source .venv/bin/activate
+conda activate quper_gi
 
-pip install pennylane numpy scipy
-# Optional GPU backend, depending on your CUDA/PennyLane setup:
-pip install pennylane-lightning-gpu
+pip install -r requirements.txt           # numpy scipy pennylane matplotlib networkx (+ pytest)
 ```
+
+This is enough to run everything on CPU via `default.qubit` / `lightning.qubit`,
+which behave identically on NVIDIA and AMD hosts. Verify:
+
+```bash
+pytest -q                                 # the 17 unit tests are CPU-only
+```
+
+### 5.1 NVIDIA / CUDA — optional `lightning.gpu`
+
+For the large 20-qubit run, add the CUDA statevector backend:
+
+```bash
+pip install pennylane-lightning-gpu custatevec-cu12
+python -c "import pennylane as qml; print(qml.device('lightning.gpu', wires=4))"
+```
+
+Then run the large case with `--device lightning.gpu` (see Section 6).
+
+### 5.2 AMD / ROCm (e.g. MI300X) — use `lightning.amdgpu`
+
+`pennylane-lightning-gpu` (cuStateVec) is CUDA-only, but AMD GPUs have a direct
+equivalent: **`pennylane-lightning-amdgpu`** (device `lightning.amdgpu`, a Kokkos/HIP
+alias of `lightning.kokkos`), with prebuilt wheels for MI300-series GPUs on ROCm ≥ 7.0.
+
+```bash
+pip install pennylane-lightning-amdgpu   # provides lightning.amdgpu (ROCm GPU)
+```
+
+Then run the large case with **`--device lightning.amdgpu`** — i.e. replace
+`--device lightning.gpu` with `--device lightning.amdgpu` in the Section 6 large-run
+command. Verified on an MI300X (ROCm 7.x): the device runs on the AMD GPU (rocm-smi
+shows ~95% utilisation during the sweep).
+
+> Fallback: on non-MI300 / older-ROCm hardware without a prebuilt wheel, use
+> `--device lightning.qubit` (multithreaded CPU statevector; `export
+> OMP_NUM_THREADS=$(nproc)`) — identical results, CPU-bound.
 
 ---
 

@@ -7,5 +7,6 @@ networkx
 # Development:
 pytest
 
-# Optional, depending on local CUDA/PennyLane setup:
-# pennylane-lightning-gpu
+# Optional GPU statevector backend (for the large N=256 case):
+#   NVIDIA / CUDA:  pennylane-lightning-gpu      (device: lightning.gpu)
+#   AMD / ROCm:     pennylane-lightning-amdgpu   (device: lightning.amdgpu, MI300 + ROCm>=7.0)
